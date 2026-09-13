@@ -1,0 +1,10 @@
+{
+  "name": "Fitness Trainer",
+  "short_name": "Trainer",
+  "start_url": "/fitness-trainer/",
+  "scope": "/fitness-trainer/",
+  "display": "standalone",
+  "background_color": "#0A0D12",
+  "theme_color": "#0A0D12",
+  "orientation": "portrait"
+}
