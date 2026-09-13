@@ -1,17 +1,68 @@
-export const DATASET_URL = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/dist/exercises.json';
-export const DATASET_REPO = 'https://github.com/yuhonas/free-exercise-db';
-export const DATASET_MEDIA_ROOT = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/';
-export const DATASET_LICENSE = 'Public Domain (Unlicense)';
+export const DATASET_URL = 'https://exercise-dataset.com/exercises.json';
+export const DATASET_REPO = 'https://github.com/RepDB/exercise-dataset';
+export const DATASET_MEDIA_ROOT = 'https://exercise-dataset.com/';
+export const DATASET_LICENSE = 'RepDB Free Tier License v1.0';
+export const DATASET_ATTRIBUTION = 'Exercise data by RepDB (repdb.co)';
 
-const levelMap = { beginner: 'Beginner', intermediate: 'Intermediate', expert: 'Advanced' };
-const equipmentMap = {'body only':'Bodyweight',dumbbell:'Αλτήρες',dumbbells:'Αλτήρες',bands:'Λάστιχα',band:'Λάστιχα',kettlebells:'Kettlebell',kettlebell:'Kettlebell','exercise ball':'Stability Ball','foam roll':'Foam Roller',machine:'Μηχάνημα',cable:'Τροχαλία',barbell:'Μπάρα','e-z curl bar':'EZ Bar',other:'Άλλο'};
-const muscleGroupMap = {abdominals:'Κορμός',obliques:'Κορμός','lower back':'Πλάτη',lats:'Πλάτη','middle back':'Πλάτη',traps:'Πλάτη',chest:'Στήθος',shoulders:'Ώμοι',biceps:'Χέρια',triceps:'Χέρια',forearms:'Χέρια',quadriceps:'Πόδια',hamstrings:'Πόδια',calves:'Πόδια',adductors:'Πόδια',abductors:'Πόδια',glutes:'Γλουτοί',neck:'Αυχένας'};
-const goalMap = {strength:'Strength',stretching:'Mobility',cardio:'Conditioning',plyometrics:'Power',strongman:'Strength',powerlifting:'Strength','olympic weightlifting':'Power'};
-const titleCase = value => String(value || '').replace(/\b\w/g, m => m.toUpperCase());
+const levelMap = { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' };
+const equipmentMap = {
+  dumbbell:'Αλτήρες', barbell:'Μπάρα', kettlebell:'Kettlebell', cable:'Τροχαλία',
+  resistance_band:'Λάστιχα', loop_band:'Λάστιχα', suspension_trainer:'TRX', battle_rope:'Battle Ropes',
+  pull_up_bar:'Μονόζυγο', flat_bench:'Πάγκος', plyo_box:'Plyo Box', stability_ball:'Stability Ball',
+  smith_machine:'Smith Machine', leg_press:'Leg Press', leg_extension:'Leg Extension', leg_curl:'Leg Curl',
+  rower:'Κωπηλατικό', treadmill:'Διάδρομος', stationary_bike:'Ποδήλατο', stair_climber:'Stair Climber',
+  jump_rope:'Σχοινάκι', plates:'Δίσκος', rings:'Κρίκοι', sled:'Έλκηθρο', slam_ball:'Slam Ball'
+};
+const groupMap = {
+  chest:'Στήθος', back:'Πλάτη', shoulders:'Ώμοι', upper_arms:'Χέρια', lower_arms:'Χέρια',
+  upper_legs:'Πόδια', lower_legs:'Πόδια', core:'Κορμός', full_body:'Full Body'
+};
+const muscleGroupMap = {
+  abs:'Κορμός', obliques:'Κορμός', lower_back:'Πλάτη', lats:'Πλάτη', traps:'Πλάτη', rhomboids:'Πλάτη',
+  chest:'Στήθος', pectorals:'Στήθος', deltoids:'Ώμοι', shoulders:'Ώμοι', biceps:'Χέρια', triceps:'Χέρια', forearms:'Χέρια',
+  quadriceps:'Πόδια', hamstrings:'Πόδια', calves:'Πόδια', adductors:'Πόδια', abductors:'Πόδια', glutes:'Γλουτοί', hip_flexors:'Πόδια'
+};
+const goalMap = { strength:'Strength', hypertrophy:'Strength', endurance:'Endurance', mobility:'Mobility', flexibility:'Mobility', conditioning:'Conditioning', power:'Power', balance:'Balance' };
+const titleCase = value => String(value || '').replace(/_/g,' ').replace(/\b\w/g, m => m.toUpperCase());
 const first = value => Array.isArray(value) && value.length ? value[0] : '';
+const absUrl = path => path ? `${DATASET_MEDIA_ROOT}${String(path).replace(/^\//,'')}` : '';
+
 export function toFitnessExercise(item, mediaEnabled=true){
- const primary=item.primaryMuscles||[], secondary=item.secondaryMuscles||[], primaryMuscle=first(primary);
- const images=Array.isArray(item.images)?item.images.map(path=>`${DATASET_MEDIA_ROOT}${path}`):[];
- return {id:`free-db:${item.id}`,datasetId:item.id,source:'free-exercise-db',name:item.name,gr:item.name,group:muscleGroupMap[primaryMuscle]||titleCase(primaryMuscle||item.category),sourceBodyPart:primaryMuscle,equipment:equipmentMap[item.equipment]||titleCase(item.equipment||'Bodyweight'),sourceEquipment:item.equipment,level:levelMap[item.level]||titleCase(item.level||'Intermediate'),goal:goalMap[item.category]||titleCase(item.category||'Strength'),target:primaryMuscle,muscleGroup:primary.join(', '),secondary,instructions:Array.isArray(item.instructions)?item.instructions.join(' '):(item.instructions||''),instructionSteps:Array.isArray(item.instructions)?item.instructions:[],cues:Array.isArray(item.instructions)?item.instructions.slice(0,3):[],cue:Array.isArray(item.instructions)?(item.instructions[0]||''):'',mistakes:[],regression:'Δεν παρέχεται από το source dataset.',progression:'Δεν παρέχεται από το source dataset.',reps:'—',rest:30,safety:'Open exercise metadata from free-exercise-db. Validate technique and individual suitability before coaching use.',attribution:DATASET_LICENSE,media:{id:item.id,type:'remote-image-sequence',enabled:mediaEnabled,imageUrls:images,imageUrl:images[0]||'',sourcePath:item.images?.[0]||''}};
+  const primary=item.primary_muscles||[], secondary=item.secondary_muscles||[], primaryMuscle=first(primary);
+  const flat=item.images?.flat||{};
+  const frames=[flat.start,flat.peak,flat.main].filter(Boolean).map(absUrl);
+  const uniqueFrames=[...new Set(frames)];
+  const equipment=item.is_bodyweight ? 'Bodyweight' : (equipmentMap[item.equipment]||titleCase(item.equipment||'Bodyweight'));
+  const goal=goalMap[first(item.goals)]||titleCase(first(item.goals)||item.category||'Strength');
+  const instructions=Array.isArray(item.instructions_en)?item.instructions_en:[];
+  const tips=Array.isArray(item.tips_en)?item.tips_en:[];
+  const sourceGroup=groupMap[item.body_part]||muscleGroupMap[primaryMuscle]||titleCase(item.body_part||primaryMuscle||'Full Body');
+  return {
+    id:`repdb:${item.id}`, datasetId:item.id, source:'repdb',
+    name:item.name_en||titleCase(item.id), gr:item.name_en||titleCase(item.id),
+    group:sourceGroup, sourceBodyPart:item.body_part||'',
+    equipment, sourceEquipment:item.equipment||'',
+    level:levelMap[item.difficulty]||titleCase(item.difficulty||'Intermediate'),
+    goal, target:primaryMuscle||item.body_part||'', muscleGroup:primary.join(', '), secondary,
+    instructions:instructions.join(' '), instructionSteps:instructions,
+    cues:tips.length?tips.slice(0,3):instructions.slice(0,3), cue:first(tips)||first(instructions)||'',
+    mistakes:[], regression:'Δεν παρέχεται από το source dataset.', progression:'Δεν παρέχεται από το source dataset.',
+    reps:'—', rest:30,
+    safety:'Exercise metadata and illustrations by RepDB. Validate technique and individual suitability before coaching use.',
+    attribution:DATASET_ATTRIBUTION,
+    media:{
+      id:item.id, type:'remote-image-sequence', enabled:mediaEnabled, imageUrls:uniqueFrames,
+      imageUrl:uniqueFrames[0]||'', sourcePath:flat.start||flat.main||'',
+      badge:'REPDB', label:'DIGITAL EXERCISE MODEL', credit:'Exercise data by RepDB (repdb.co)'
+    }
+  };
 }
-export async function loadDatasetExercises({signal}={}){const response=await fetch(DATASET_URL,{signal,cache:'force-cache'});if(!response.ok)throw new Error(`Dataset HTTP ${response.status}`);const data=await response.json();if(!Array.isArray(data))throw new Error('Dataset response is not an array');const mediaEnabled=import.meta.env.VITE_ENABLE_EXERCISE_MEDIA!=='false';return data.map(item=>toFitnessExercise(item,mediaEnabled));}
+
+export async function loadDatasetExercises({signal}={}){
+  const response=await fetch(DATASET_URL,{signal,cache:'force-cache'});
+  if(!response.ok)throw new Error(`Dataset HTTP ${response.status}`);
+  const data=await response.json();
+  if(!data || !Array.isArray(data.exercises))throw new Error('RepDB dataset response is invalid');
+  const mediaEnabled=import.meta.env.VITE_ENABLE_EXERCISE_MEDIA!=='false';
+  return data.exercises.map(item=>toFitnessExercise(item,mediaEnabled));
+}
