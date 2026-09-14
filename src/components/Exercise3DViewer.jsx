@@ -20,7 +20,6 @@ function Model({modelUrl,animationName,scale=1,position=[0,0,0],rotation=[0,0,0]
       console.warn(`No skeletal animation found in ${modelUrl}`);
       return;
     }
-
     const requested=String(animationName||'').toLowerCase();
     const exact=names.find(n=>n.toLowerCase()===requested);
     const fuzzy=requested?names.find(n=>n.toLowerCase().includes(requested)):null;
@@ -61,6 +60,8 @@ export default function Exercise3DViewer({
   background='#080d12'
 }){
   const viewerHeight=height||(compact?210:390);
+  const compactCamera=compact?[cameraPosition[0],Math.min(cameraPosition[1],1.25),cameraPosition[2]]:cameraPosition;
+  const compactTarget=compact?[cameraTarget[0],Math.min(cameraTarget[1],.55),cameraTarget[2]]:cameraTarget;
 
   if(!modelUrl){
     return <div className="exercise3d-empty" style={{height:viewerHeight}}>Δεν υπάρχει 3D μοντέλο.</div>;
@@ -69,7 +70,7 @@ export default function Exercise3DViewer({
   return <div className={`exercise3d-viewer ${compact?'exercise3d-compact':''}`} style={{height:viewerHeight,background}}>
     <Canvas
       dpr={[1,1.7]}
-      camera={{position:cameraPosition,fov:36,near:.1,far:100}}
+      camera={{position:compactCamera,fov:compact?34:36,near:.1,far:100}}
       gl={{antialias:true,powerPreference:'high-performance'}}
     >
       <color attach="background" args={[background]}/>
@@ -81,7 +82,7 @@ export default function Exercise3DViewer({
         <Model
           modelUrl={modelUrl}
           animationName={animationName}
-          scale={scale}
+          scale={compact?scale*1.08:scale}
           position={modelPosition}
           rotation={modelRotation}
           playbackSpeed={playbackSpeed}
@@ -95,7 +96,7 @@ export default function Exercise3DViewer({
         enableRotate
         enableZoom={false}
         enablePan={false}
-        target={cameraTarget}
+        target={compactTarget}
         minPolarAngle={Math.PI*.15}
         maxPolarAngle={Math.PI*.78}
         enableDamping
