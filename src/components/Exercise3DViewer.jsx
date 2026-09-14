@@ -106,6 +106,6 @@ export default function Exercise3DViewer({
     </Canvas>
 
     {!compact&&<div className="exercise3d-hint">Σύρε με το δάχτυλο για 360°</div>}
-    <div className="exercise3d-badge">3D · GLB · SKELETAL</div>
+    {!compact&&<div className="exercise3d-badge">3D · GLB · SKELETAL</div>}
   </div>;
 }
