@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useCallback,useEffect,useState} from 'react';
 import Exercise3DViewer from './Exercise3DViewer';
 
 function ImageSequencePreview({exercise,compact=false}){
@@ -34,11 +34,11 @@ const motionKind=exercise=>{
   return'general';
 };
 
-function MotionPreview({exercise,compact=false}){
+export function MotionPreview({exercise,compact=false,height}){
   const kind=motionKind(exercise);
   const horizontal=kind==='horizontal';
   const label=exercise?.media3d?'3D PREVIEW':'MOTION PREVIEW';
-  return <div className={`demo motion-preview motion-${kind} ${compact?'demo-compact':''}`} aria-label={`Motion preview: ${exercise?.gr||exercise?.name||''}`}>
+  return <div className={`demo motion-preview motion-${kind} ${compact?'demo-compact':''}`} style={height?{height}:undefined} aria-label={`Motion preview: ${exercise?.gr||exercise?.name||''}`}>
     <style>{`
       .motion-preview{position:relative;overflow:hidden;display:grid;place-items:center;min-height:${compact?'112px':'300px'};background:radial-gradient(circle at 50% 42%,rgba(198,161,91,.13),rgba(255,255,255,.025) 45%,transparent 72%)}
       .motion-preview svg{width:${compact?'86%':'78%'};max-width:420px;height:${compact?'106px':'260px'};overflow:visible}
@@ -75,20 +75,30 @@ function MotionPreview({exercise,compact=false}){
   </div>;
 }
 
+// A missing, unreachable or animation-less 3D asset NEVER fakes content:
+// it degrades to the professional vector illustration fallback below.
 export default function ExerciseAnimation({exercise,compact=false}){
-  if(exercise?.media3d?.type==='glb'){
-    const media=exercise.media3d;
+  const media=exercise?.media3d;
+  const [degraded,setDegraded]=useState(null); // null | 'load-failed' | 'no-clips'
+  useEffect(()=>{setDegraded(null)},[exercise?.id,media?.modelUrl]);
+  const onNoAnimation=useCallback(()=>setDegraded('no-clips'),[]);
+  const fallback=useCallback(()=><MotionPreview exercise={exercise} compact={compact}/>,[exercise,compact]);
+
+  if(media?.type==='glb'&&!degraded){
     return <Exercise3DViewer
+      key={`${exercise?.id}|${media.modelUrl}`}
       modelUrl={media.modelUrl}
       animationName={media.animationName}
       compact={compact}
       cameraPosition={media.camera?.position||[2.8,1.7,4.2]}
-      cameraTarget={media.camera?.target||[0,1,0]}
       scale={media.model?.scale||1}
       modelPosition={media.model?.position||[0,0,0]}
       modelRotation={media.model?.rotation||[0,0,0]}
+      fallback={fallback}
+      onNoAnimation={onNoAnimation}
     />;
   }
-  if(exercise?.media?.type==='remote-image-sequence')return <ImageSequencePreview exercise={exercise} compact={compact}/>;
+  if(degraded)console.warn(`ExerciseAnimation: 3D unavailable (${degraded}) → illustration fallback for ${exercise?.id}`);
+  if(exercise?.media?.type==='remote-image-sequence'&&!degraded)return <ImageSequencePreview exercise={exercise} compact={compact}/>;
   return <MotionPreview exercise={exercise} compact={compact}/>;
 }

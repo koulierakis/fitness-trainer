@@ -14,6 +14,8 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm run build
+      - name: Verify 3D assets (existence, CORS, skeletal clips)
+        run: npm run verify:3d
       - name: Functional data QA
         run: |
           node --input-type=module -e "import('./src/programs60.js').then(m=>{if(!m.validatePrograms())process.exit(1);console.log('Programs:',m.programs.length,'all 3600s')})"

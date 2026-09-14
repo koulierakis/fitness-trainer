@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "verify:3d": "node scripts/verify-3d-assets.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
