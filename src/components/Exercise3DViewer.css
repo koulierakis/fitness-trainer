@@ -1,0 +1,8 @@
+.exercise3d-viewer{width:100%;position:relative;overflow:hidden;border-radius:20px;background:#080d12;touch-action:none;border:1px solid rgba(255,255,255,.08);box-shadow:0 18px 42px rgba(0,0,0,.28)}
+.exercise3d-viewer canvas{width:100%!important;height:100%!important;display:block;outline:none}
+.exercise3d-compact{border-radius:14px;min-height:180px}
+.exercise3d-hint{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);pointer-events:none;background:rgba(5,10,15,.72);color:rgba(255,255,255,.78);font-size:11px;padding:7px 11px;border-radius:999px;white-space:nowrap;backdrop-filter:blur(10px)}
+.exercise3d-badge{position:absolute;left:10px;top:10px;pointer-events:none;background:rgba(5,10,15,.7);color:#d9bd79;border:1px solid rgba(217,189,121,.28);font-size:9px;font-weight:800;letter-spacing:.12em;padding:6px 8px;border-radius:999px;backdrop-filter:blur(8px)}
+.exercise3d-loader{color:#fff;font-size:12px;padding:9px 12px;background:rgba(0,0,0,.55);border-radius:10px;white-space:nowrap}
+.exercise3d-empty{width:100%;display:flex;align-items:center;justify-content:center;background:#080d12;color:#8492a3;border-radius:20px;font-size:13px}
+@media(max-width:480px){.exercise3d-viewer{border-radius:16px}.exercise3d-hint{bottom:9px;font-size:10px}.exercise3d-badge{font-size:8px}}
