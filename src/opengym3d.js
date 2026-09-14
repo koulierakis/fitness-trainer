@@ -2,37 +2,51 @@ export const OPENGYM3D_BASE='https://assiamahs.github.io/opengym3d';
 export const OPENGYM3D_MANIFEST=`${OPENGYM3D_BASE}/exercises.json`;
 
 const greekNames={
-  push_up:'Κάμψεις',
-  squat:'Καθίσματα',
-  plank:'Σανίδα',
-  burpee:'Burpee',
-  bicep_curl:'Κάμψεις δικεφάλων',
-  front_raise:'Μπροστινές άρσεις ώμων',
-  jumping_jack:'Jumping Jacks',
-  situp:'Ροκανίσματα Sit-Up',
   back_squat:'Back Squat με μπάρα',
-  snatch:'Snatch',
-  jump_push_up:'Εκρηκτικές κάμψεις',
-  pistol_squat:'Pistol Squat',
+  bent_over_row:'Κωπηλατική σκυφτός με μπάρα',
+  bicep_curl:'Κάμψεις δικεφάλων',
   bicycle_crunch:'Bicycle Crunch',
-  overhead_squat:'Overhead Squat',
-  sumo_high_pull:'Sumo High Pull',
+  burpee:'Burpee',
+  calf_raise:'Άρσεις γαστροκνημίων',
   clean_and_jerk:'Clean & Jerk',
-  kettlebell_swing:'Kettlebell Swing'
+  crunch:'Ροκανίσματα',
+  deadlift:'Deadlift',
+  dumbbell_shoulder_press:'Πιέσεις ώμων με αλτήρες',
+  front_raise:'Μπροστινές άρσεις ώμων',
+  glute_bridge:'Γέφυρα γλουτών',
+  good_morning:'Good Morning',
+  hammer_curl:'Hammer Curl',
+  high_knees:'High Knees',
+  jump_push_up:'Εκρηκτικές κάμψεις',
+  jumping_jack:'Jumping Jacks',
+  kettlebell_swing:'Kettlebell Swing',
+  lateral_raise:'Πλάγιες άρσεις ώμων',
+  lunge:'Προβολές',
+  overhead_press:'Overhead Press',
+  overhead_squat:'Overhead Squat',
+  overhead_tricep_extension:'Εκτάσεις τρικεφάλων πάνω από το κεφάλι',
+  pistol_squat:'Pistol Squat',
+  plank:'Σανίδα',
+  push_up:'Κάμψεις',
+  reverse_lunge:'Προβολές πίσω',
+  romanian_deadlift:'Romanian Deadlift',
+  situp:'Sit-Up',
+  snatch:'Snatch',
+  squat:'Καθίσματα',
+  sumo_high_pull:'Sumo Deadlift High Pull',
+  sumo_squat:'Sumo Squat',
+  superman:'Superman',
+  wall_sit:'Wall Sit'
 };
 
-const equipmentMap={
-  None:'Bodyweight',
-  'Body Weight':'Bodyweight',
-  Bodyweight:'Bodyweight',
-  Dumbbell:'Dumbbells',
-  Dumbbells:'Dumbbells',
-  Barbell:'Barbell',
-  Kettlebell:'Kettlebell',
-  Cable:'Cables',
-  Rope:'Ropes',
-  Band:'Resistance Bands'
+const equipmentById={
+  back_squat:'Barbell',bent_over_row:'Barbell',clean_and_jerk:'Barbell',deadlift:'Barbell',good_morning:'Barbell',
+  overhead_press:'Barbell',overhead_squat:'Barbell',romanian_deadlift:'Barbell',snatch:'Barbell',sumo_high_pull:'Barbell',
+  dumbbell_shoulder_press:'Dumbbells',bicep_curl:'Dumbbells',front_raise:'Dumbbells',hammer_curl:'Dumbbells',lateral_raise:'Dumbbells',overhead_tricep_extension:'Dumbbells',
+  kettlebell_swing:'Kettlebell'
 };
+
+const equipmentMap={None:'Bodyweight','Body Weight':'Bodyweight',Bodyweight:'Bodyweight',Dumbbell:'Dumbbells',Dumbbells:'Dumbbells',Barbell:'Barbell',Kettlebell:'Kettlebell',Cable:'Cables',Rope:'Ropes',Band:'Resistance Bands'};
 
 const muscleToGroup=value=>{
   const s=String(value||'').toLowerCase();
@@ -46,14 +60,20 @@ const muscleToGroup=value=>{
   return 'Full Body';
 };
 
+const compoundIds=new Set(['back_squat','bent_over_row','burpee','clean_and_jerk','deadlift','dumbbell_shoulder_press','good_morning','jump_push_up','kettlebell_swing','lunge','overhead_press','overhead_squat','pistol_squat','push_up','reverse_lunge','romanian_deadlift','snatch','squat','sumo_high_pull','sumo_squat']);
+const stabilityIds=new Set(['plank','glute_bridge','superman','wall_sit','bicycle_crunch']);
+const conditioningIds=new Set(['burpee','high_knees','jump_push_up','jumping_jack','clean_and_jerk','snatch','sumo_high_pull','kettlebell_swing']);
+
 const goalFor=item=>{
   const id=String(item?.id||'');
-  if(/burpee|jump|snatch|clean|high_pull|swing/.test(id))return 'Conditioning';
-  if(/plank|situp|crunch/.test(id))return 'Endurance';
+  if(conditioningIds.has(id))return 'Conditioning';
+  if(stabilityIds.has(id))return 'Stability';
+  if(/situp|crunch/.test(id))return 'Core';
   return 'Strength';
 };
 
-function cameraFor(value){
+function cameraFor(value,id){
+  if(['deadlift','romanian_deadlift','good_morning','kettlebell_swing','push_up','glute_bridge','superman'].includes(id))return {position:[4.4,1.6,0],target:[0,1,0]};
   switch(String(value||'front').toLowerCase()){
     case 'side':return {position:[4.4,1.6,0],target:[0,1,0]};
     case 'back':return {position:[0,1.7,-4.2],target:[0,1,0]};
@@ -67,54 +87,39 @@ export function toAthletico3D(item){
   const primary=Array.isArray(item.primary)?item.primary:[];
   const secondary=Array.isArray(item.secondary)?item.secondary:[];
   const steps=Array.isArray(item.steps)?item.steps:[];
-  const equipment=equipmentMap[item.equipment]||item.equipment||'Bodyweight';
-  const camera=cameraFor(item.camera);
+  const id=String(item.id||'');
+  const equipment=equipmentById[id]||equipmentMap[item.equipment]||item.equipment||'Bodyweight';
+  const camera=cameraFor(item.camera,id);
   return {
-    id:`opengym3d:${item.id}`,
-    openGymId:item.id,
+    id:`opengym3d:${id}`,
+    openGymId:id,
     source:'opengym3d',
-    name:item.name||String(item.id).replaceAll('_',' '),
-    gr:greekNames[item.id]||item.name||String(item.id).replaceAll('_',' '),
+    name:item.name||id.replaceAll('_',' '),
+    gr:greekNames[id]||item.name||id.replaceAll('_',' '),
     group:muscleToGroup(primary[0]||secondary[0]),
     equipment,
     goal:goalFor(item),
+    movement:compoundIds.has(id)?'Compound':'Accessory',
     target:primary.join(', '),
     muscleGroup:primary.join(', '),
     secondary,
-    instructions:steps.join(' '),
+    instructions:steps.join(' ')||'Εκτέλεσε την κίνηση ελεγχόμενα, με σταθερό κορμό και πλήρες ασφαλές εύρος κίνησης.',
     instructionSteps:steps,
     cues:steps.slice(0,3),
     cue:steps[0]||'',
     mistakes:[],
     regression:'',
     progression:'',
-    reps:'10–12 επαναλήψεις',
-    rest:30,
+    reps:conditioningIds.has(id)?'30–45s':'8–12 επαναλήψεις',
+    rest:conditioningIds.has(id)?30:45,
     safety:'Δώσε προτεραιότητα στην τεχνική και σταμάτησε αν υπάρχει πόνος.',
-    media3d:{
-      type:'glb',
-      modelUrl:item.glb?.startsWith('http')?item.glb:`${OPENGYM3D_BASE}/${item.glb||`assets/${item.id}.glb`}`,
-      animationName:item.animationName||item.id,
-      duration:item.duration||5,
-      loop:true,
-      camera
-    }
+    media3d:{type:'glb',modelUrl:item.glb?.startsWith('http')?item.glb:`${OPENGYM3D_BASE}/${item.glb||`assets/${id}.glb`}`,animationName:item.animationName||id,duration:item.duration||5,loop:true,camera}
   };
 }
 
-const FALLBACK_LIVE_IDS=[
-  'push_up','squat','plank','burpee','situp','snatch','back_squat','jump_push_up',
-  'pistol_squat','bicycle_crunch','overhead_squat','sumo_high_pull','clean_and_jerk',
-  'kettlebell_swing','jumping_jack','bicep_curl','front_raise'
-];
+const FALLBACK_LIVE_IDS=['back_squat','bent_over_row','bicep_curl','bicycle_crunch','burpee','calf_raise','clean_and_jerk','crunch','deadlift','dumbbell_shoulder_press','front_raise','glute_bridge','good_morning','hammer_curl','high_knees','jump_push_up','jumping_jack','kettlebell_swing','lateral_raise','lunge','overhead_press','overhead_squat','overhead_tricep_extension','pistol_squat','plank','push_up','reverse_lunge','romanian_deadlift','situp','snatch','squat','sumo_high_pull','sumo_squat','superman','wall_sit'];
 
-const fallbackRecords=FALLBACK_LIVE_IDS.map(id=>({
-  id,
-  name:id.replaceAll('_',' ').replace(/\b\w/g,m=>m.toUpperCase()),
-  equipment:id.includes('bar')||['snatch','overhead_squat','sumo_high_pull','clean_and_jerk','back_squat'].includes(id)?'Barbell':id==='kettlebell_swing'?'Kettlebell':id==='bicep_curl'||id==='front_raise'?'Dumbbell':'None',
-  primary:[],secondary:[],steps:[],camera:id==='kettlebell_swing'?'side':'front',
-  glb:`assets/${id}.glb`
-}));
+const fallbackRecords=FALLBACK_LIVE_IDS.map(id=>({id,name:id.replaceAll('_',' ').replace(/\b\w/g,m=>m.toUpperCase()),equipment:equipmentById[id]||'None',primary:[],secondary:[],steps:[],camera:'front',glb:`assets/${id}.glb`}));
 
 export async function loadOpenGym3DExercises({signal}={}){
   try{
@@ -126,7 +131,7 @@ export async function loadOpenGym3DExercises({signal}={}){
     return list.map(toAthletico3D);
   }catch(err){
     if(err?.name==='AbortError')throw err;
-    console.warn('OpenGym3D manifest unavailable; using verified fallback list.',err);
+    console.warn('OpenGym3D manifest unavailable; using bundled fallback catalogue.',err);
     return fallbackRecords.map(toAthletico3D);
   }
 }
