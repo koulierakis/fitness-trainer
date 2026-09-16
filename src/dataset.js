@@ -37,12 +37,14 @@ export function toFitnessExercise(item, mediaEnabled=true){
   const equipment=equipmentMap[norm(equipmentRaw)]||titleCase(equipmentRaw);
   const gifUrl=item.gifUrl||'';
   const level=isAdvanced(item)?'Advanced':'Beginner';
+  const primaryMuscles=Array.isArray(item.targetMuscles)&&item.targetMuscles.length?item.targetMuscles:(bodyPart?[bodyPart]:[]);
 
   return {
     id:`ascend:${item.exerciseId}`, datasetId:item.exerciseId, source:'ascend-exercisedb-v1',
     name:item.name||titleCase(item.exerciseId), gr:item.name||titleCase(item.exerciseId),
     group, sourceBodyPart:bodyPart||'', equipment, sourceEquipment:equipmentRaw,
-    level, goal:stretching?'Stretching':'Strength', target:target||bodyPart||'',
+    level, goal:stretching?'Stretching':'Strength', movement:stretching?'Stretching':(bodyPart||target||'Functional'),
+    target:target||bodyPart||'', primaryMuscles, secondaryMuscles:secondary,
     muscleGroup:(item.targetMuscles||[]).join(', '), secondary,
     instructions:instructions.join(' '), instructionSteps:instructions,
     cues:instructions.slice(0,3), cue:first(instructions)||'', mistakes:[],
