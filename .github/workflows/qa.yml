@@ -1,7 +1,7 @@
 name: Functional QA
 on:
   push:
-    branches: [main, work/functional-gif-library]
+    branches: [main, work/functional-gif-library, work/functional-full-1500-gif-catalog]
   pull_request:
     branches: [main]
 jobs:
@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
       - run: npm install
       - run: npm run build
       - name: Verify 3D assets

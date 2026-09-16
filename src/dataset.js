@@ -37,12 +37,14 @@ export function toFitnessExercise(item, mediaEnabled=true){
   const equipment=equipmentMap[norm(equipmentRaw)]||titleCase(equipmentRaw);
   const gifUrl=item.gifUrl||'';
   const level=isAdvanced(item)?'Advanced':'Beginner';
+  const primaryMuscles=Array.isArray(item.targetMuscles)&&item.targetMuscles.length?item.targetMuscles:(bodyPart?[bodyPart]:[]);
 
   return {
     id:`ascend:${item.exerciseId}`, datasetId:item.exerciseId, source:'ascend-exercisedb-v1',
     name:item.name||titleCase(item.exerciseId), gr:item.name||titleCase(item.exerciseId),
     group, sourceBodyPart:bodyPart||'', equipment, sourceEquipment:equipmentRaw,
-    level, goal:stretching?'Stretching':'Strength', target:target||bodyPart||'',
+    level, goal:stretching?'Stretching':'Strength', movement:stretching?'Stretching':(bodyPart||target||'Functional'),
+    target:target||bodyPart||'', primaryMuscles, secondaryMuscles:secondary,
     muscleGroup:(item.targetMuscles||[]).join(', '), secondary,
     instructions:instructions.join(' '), instructionSteps:instructions,
     cues:instructions.slice(0,3), cue:first(instructions)||'', mistakes:[],
@@ -59,12 +61,37 @@ export function toFitnessExercise(item, mediaEnabled=true){
   };
 }
 
-export async function loadDatasetExercises({signal}={}){
-  const response=await fetch(DATASET_URL,{signal,cache:'no-store'});
+async function fetchDatasetPage({signal,after=null,limit=100}={}){
+  const url=new URL(DATASET_URL);
+  url.searchParams.set('limit',String(limit));
+  if(after)url.searchParams.set('after',after);
+  const response=await fetch(url.toString(),{signal,cache:'no-store'});
   if(!response.ok)throw new Error(`ExerciseDB HTTP ${response.status}`);
   const payload=await response.json();
   const items=Array.isArray(payload?.data)?payload.data:[];
   if(!items.length)throw new Error('ExerciseDB V1 response is invalid or empty');
+  return {items,meta:payload?.meta||{}};
+}
+
+export async function loadDatasetExercises({signal}={}){
+  const all=[];
+  const seen=new Set();
+  let after=null;
+  let hasNext=true;
+  let guard=0;
+  while(hasNext&&guard<100){
+    const {items,meta}=await fetchDatasetPage({signal,after,limit:100});
+    for(const item of items){
+      if(item?.exerciseId&&!seen.has(item.exerciseId)){
+        seen.add(item.exerciseId);
+        all.push(item);
+      }
+    }
+    hasNext=Boolean(meta.hasNextPage&&meta.nextCursor);
+    after=hasNext?meta.nextCursor:null;
+    guard+=1;
+  }
+  if(!all.length)throw new Error('ExerciseDB V1 catalog is empty');
   const mediaEnabled=import.meta.env.VITE_ENABLE_EXERCISE_MEDIA!=='false';
-  return items.map(item=>toFitnessExercise(item,mediaEnabled));
+  return all.map(item=>toFitnessExercise(item,mediaEnabled));
 }
