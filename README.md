@@ -1,17 +1,10 @@
-# FITNESS TRAINER v2.4
+# ATHLETICO FITNESS TRAINER
 
-Standalone mobile-first React/Vite PWA for Functional Training and Pilates Reformer.
+Private mobile-first React/Vite PWA for Functional Training and Pilates Reformer.
 
-## Exercise data and illustrated media
+## Functional exercise media
 
-The external exercise source is **RepDB/exercise-dataset**.
-
-- Repository: https://github.com/RepDB/exercise-dataset
-- Runtime JSON: https://exercise-dataset.com/exercises.json
-- License: RepDB Free Tier License v1.0
-- Attribution: Exercise data by [RepDB](https://repdb.co)
-
-The free dataset provides 512px flat digital exercise illustrations, generally with a start and peak pose. Fitness Trainer alternates those poses to create a lightweight movement preview without using gym photographs or real-person photography.
+Functional exercises use animated GIF demonstrations from the configured ExerciseDB V1 feed. GIFs loop automatically so the trainer can see the movement without opening a video player.
 
 Media is enabled by default:
 
@@ -19,21 +12,29 @@ Media is enabled by default:
 VITE_ENABLE_EXERCISE_MEDIA=true
 ```
 
+## Athletico taxonomy
+
+- Levels: Beginner / Advanced
+- Core equipment: Bodyweight, Dumbbells, Barbell, Kettlebell, TRX, Battle Ropes
+- Muscle groups: Χέρια, Στήθος, Πλάτη, Πόδια, Κοιλιακοί, Ραχιαίοι
+- Stretching is a standalone exercise category
+- Flexibility and Mobility remain distinct training goals
+
+## 60-minute programs
+
+Ready sessions are exactly 60:00 and are available for Beginner and Advanced. Current program families: Full Body, Strength, Conditioning, Mobility, Flexibility and Stretching.
+
 ## Features
 
-- Large Functional exercise library from RepDB
-- Beginner / Intermediate / Advanced filtering
-- Equipment, muscle-group and goal filters
-- Digital illustrated start/peak exercise previews
-- Ready Functional workouts and interval player
+- Animated GIF exercise demonstrations
+- Functional exercise library with equipment and muscle-group metadata
+- Beginner / Advanced classification
+- Ready 60-minute Functional sessions
+- Interval workout player
 - Greek voice search and workout controls
 - Favorites and workout history in localStorage
-- Pilates Reformer 50-minute program section
+- Pilates Reformer section
 - PWA shell for mobile use
-
-## Attribution
-
-Exercise data by [RepDB](https://repdb.co).
 
 ## Local run
 
