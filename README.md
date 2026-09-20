@@ -48,3 +48,7 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Open-source media attribution
+
+Exercise data/images by [RepDB](https://repdb.co). RepDB free-tier assets are used in-app under the repository's Free Tier License; paid-tier preview animations are not used.
