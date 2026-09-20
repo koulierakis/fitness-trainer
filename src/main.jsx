@@ -8,6 +8,7 @@ import {loadOpenGym3DExercises} from './opengym3d';
 import {loadDatasetExercises} from './dataset';
 import {reformerPrograms} from './reformerData';
 import ExerciseAnimation from './components/ExerciseAnimation';
+import {resolveCuratedGif} from './curatedMediaMap';
 import {buildTimeline,totalSeconds} from './engine/workout';
 
 const fmt=s=>`${Math.floor(Math.max(0,s)/60)}:${String(Math.max(0,s)%60).padStart(2,'0')}`;
@@ -25,7 +26,7 @@ function App(){
  const exercises=useMemo(()=>{
    const byName=new Map(gif.map(x=>[norm(x.name),x]));
    const threeD=new Map(remote3d.filter(x=>x.media3d).map(x=>[x.openGymId,x]));
-   const canonical=canonicalExercises.map(x=>{const g=byName.get(norm(x.name))||byName.get(norm(x.gr)),m=threeD.get(x.openGymId);return{...(g||{}),...(m||{}),...x,media:g?.media||x.media,media3d:m?.media3d||x.media3d,level:g?.level||x.level||'Beginner'}});
+   const canonical=canonicalExercises.map(x=>{const lookup=new Map([...byName.entries()].map(([k,v])=>[k,v]));const g=resolveCuratedGif({...x,name:norm(x.name)},lookup)||byName.get(norm(x.gr)),m=threeD.get(x.openGymId);return{...(g||{}),...(m||{}),...x,media:g?.media||x.media,media3d:m?.media3d||x.media3d,level:g?.level||x.level||'Beginner'}});
    const names=new Set(canonical.map(x=>norm(x.name)));
    const gifOnly=gif.filter(x=>!names.has(norm(x.name)));
    return[...canonical,...gifOnly];
