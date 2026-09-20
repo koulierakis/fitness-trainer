@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "verify:3d": "node scripts/verify-3d-assets.mjs",
-    "verify:functional-media": "node scripts/verify-functional-media.mjs"
+    "verify:functional-media": "node scripts/verify-functional-media.mjs",
+    "plan:functional-3d": "node scripts/build-functional-animation-queue.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
