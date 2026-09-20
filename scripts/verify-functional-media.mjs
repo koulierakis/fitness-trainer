@@ -8,8 +8,15 @@ async function loadSource(){
   const all=[]; const seen=new Set(); let after=null; let guard=0;
   do{
     const url=new URL(API); url.searchParams.set('limit','100'); if(after)url.searchParams.set('after',after);
-    const res=await fetch(url,{headers:{accept:'application/json'}});
+    let res;
+    for(let attempt=0;attempt<5;attempt++){
+      res=await fetch(url,{headers:{accept:'application/json'}});
+      if(res.ok)break;
+      if(res.status!==429&&res.status<500)break;
+      await new Promise(resolve=>setTimeout(resolve,1000*(attempt+1)));
+    }
     if(!res.ok)throw new Error(`ExerciseDB HTTP ${res.status}`);
+    await new Promise(resolve=>setTimeout(resolve,250));
     const payload=await res.json();
     for(const item of payload?.data||[]) if(item?.exerciseId&&!seen.has(item.exerciseId)){seen.add(item.exerciseId);all.push(item)}
     after=payload?.meta?.hasNextPage?payload?.meta?.nextCursor:null;
