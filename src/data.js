@@ -91,7 +91,7 @@ const extraRows=[
 ['crab_walk','Crab Walk','Βάδισμα crab','Full Body','Bodyweight','Locomotion','Conditioning'],
 ['kettlebell_deadlift','Kettlebell Deadlift','Deadlift με kettlebell','Πόδια','Kettlebell','Hinge','Strength'],
 ['kettlebell_rdl','Kettlebell Romanian Deadlift','Romanian Deadlift με kettlebell','Πόδια','Kettlebell','Hinge','Strength'],
-['kettlebell_sum_deadlift','Kettlebell Sumo Deadlift','Sumo deadlift με kettlebell','Πόδια','Kettlebell','Hinge','Strength'],
+['kettlebell_sumo_deadlift','Kettlebell Sumo Deadlift','Sumo deadlift με kettlebell','Πόδια','Kettlebell','Hinge','Strength'],
 ['kettlebell_press','Kettlebell Strict Press','Πιέσεις kettlebell','Ώμοι','Kettlebell','Vertical Push','Strength'],
 ['single_arm_kb_press','Single-Arm Kettlebell Press','Μονόχειρες πιέσεις kettlebell','Ώμοι','Kettlebell','Vertical Push','Strength'],
 ['kettlebell_high_pull','Kettlebell High Pull','High pull με kettlebell','Full Body','Kettlebell','Hinge + Pull','Power'],
@@ -151,6 +151,7 @@ const extraRows=[
 ['kneeling_lat_stretch','Kneeling Lat Stretch','Διάταση πλάτης γονατιστός','Πλάτη','Bench/Step','Stretching','Mobility']
 ];
 rows.push(...extraRows);
+const defaultAliases={push_up:['καμψεις','push up'],squat:['καθισματα'],plank:['σανιδα'],burpee:['μπερπι'],mountain_climber:['ορειβατης'],romanian_deadlift:['rdl'],kettlebell_swing:['swing'],kettlebell_goblet_squat:['goblet squat'],turkish_get_up:['get up'],band_pallof_press:['pallof'],dumbbell_romanian_deadlift:['rdl με αλτηρες']};
 
 const conditioning=new Set(['Conditioning','Power']);
-export const exercises=rows.map(([id,name,gr,group,equipment,movement,goal])=>({id:`local:${id}`,openGymId:id,name,gr,group,equipment,primaryMuscles:[group],secondaryMuscles:group==='Κορμός'?['Γλουτοί','Σταθεροποιητές ώμων']:['Κορμός','Σταθεροποιητές'],movement,goal,instructions:`Εκτέλεσε ${gr} με ελεγχόμενο ρυθμό, ουδέτερη σπονδυλική στήλη και ασφαλές εύρος κίνησης.`,cues:['Σταθερός κορμός','Έλεγξε την τροχιά','Ποιότητα πριν από ταχύτητα'],mistakes:['Απώλεια ουδέτερης θέσης','Βιαστική εκτέλεση','Εύρος κίνησης χωρίς έλεγχο'],regression:'Μείωσε φορτίο, εύρος ή ταχύτητα και χρησιμοποίησε σταθερότερη παραλλαγή.',progression:'Αύξησε σταδιακά φορτίο, εύρος, πυκνότητα ή πολυπλοκότητα μόνο με άριστη τεχνική.',reps:conditioning.has(goal)?'30–45s':'8–12 επαναλήψεις',rest:conditioning.has(goal)?30:45,safety:'Σταμάτησε αν υπάρχει πόνος. Προσαρμόζεις φορτίο και εύρος στην τεχνική σου.'}));
+export const exercises=rows.map(([id,name,gr,group,equipment,movement,goal])=>({id:`local:${id}`,openGymId:id,name,gr,aliases:defaultAliases[id]||[],group,equipment,primaryMuscles:[group],secondaryMuscles:group==='Κορμός'?['Γλουτοί','Σταθεροποιητές ώμων']:['Κορμός','Σταθεροποιητές'],movement,goal,instructions:`Εκτέλεσε ${gr} με ελεγχόμενο ρυθμό, ουδέτερη σπονδυλική στήλη και ασφαλές εύρος κίνησης.`,cues:['Σταθερός κορμός','Έλεγξε την τροχιά','Ποιότητα πριν από ταχύτητα'],mistakes:['Απώλεια ουδέτερης θέσης','Βιαστική εκτέλεση','Εύρος κίνησης χωρίς έλεγχο'],regression:'Μείωσε φορτίο, εύρος ή ταχύτητα και χρησιμοποίησε σταθερότερη παραλλαγή.',progression:'Αύξησε σταδιακά φορτίο, εύρος, πυκνότητα ή πολυπλοκότητα μόνο με άριστη τεχνική.',reps:conditioning.has(goal)?'30–45s':'8–12 επαναλήψεις',rest:conditioning.has(goal)?30:45,safety:'Σταμάτησε αν υπάρχει πόνος. Προσαρμόζεις φορτίο και εύρος στην τεχνική σου.'}));
