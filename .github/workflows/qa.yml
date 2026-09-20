@@ -17,8 +17,7 @@ jobs:
       - name: Verify 3D assets
         run: npm run verify:3d
       - name: Curated Functional media QA
-        run: |
-          node --input-type=module -e "Promise.all([import('./src/data.js'),import('./src/curatedMediaMap.js')]).then(([d,m])=>{if(d.exercises.length!==201)throw new Error('Expected 201 curated exercises');const ids=new Set(d.exercises.map(x=>x.id));for(const id of Object.keys(m.CURATED_GIF_NAME_MAP))if(!ids.has(id))throw new Error('Unknown curated media id: '+id);const aliases=Object.values(m.CURATED_GIF_NAME_MAP);if(new Set(aliases).size!==aliases.length)console.warn('Duplicate source aliases exist; review intentional reuse');console.log('Curated exercises:',d.exercises.length,'reviewed GIF aliases:',aliases.length)})"
+        run: npm run verify:functional-media
       - name: Functional program QA
         run: |
           node --input-type=module -e "import('./src/programs60.js').then(m=>{if(!m.validatePrograms())process.exit(1);console.log('Programs:',m.programs.length,'all 3600s')})"
