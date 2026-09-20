@@ -1,0 +1,1837 @@
+{
+  "generatedFrom": {
+    "repository": "koulierakis/fitness-trainer",
+    "branch": "work/functional-200-curated",
+    "source": "src/data.js"
+  },
+  "purpose": "Personal/non-commercial Athletico Trainer exercise matching audit. This file does not redistribute third-party media.",
+  "total": 201,
+  "equipmentCounts": {
+    "Bodyweight": 69,
+    "Barbell": 14,
+    "Dumbbells": 40,
+    "Kettlebell": 20,
+    "TRX": 11,
+    "Resistance Bands": 21,
+    "Cables": 6,
+    "Battle Ropes": 5,
+    "BOSU": 2,
+    "Bench/Step": 13
+  },
+  "statusLegend": {
+    "pending": "Dataset candidate not yet verified",
+    "matched": "Dataset exercise identity verified",
+    "no_match": "No sufficiently reliable dataset match"
+  },
+  "exercises": [
+    {
+      "athleticoId": "push_up",
+      "name": "Push-Up",
+      "equipment": "Bodyweight",
+      "query": "push up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "squat",
+      "name": "Squat",
+      "equipment": "Bodyweight",
+      "query": "squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "reverse_lunge",
+      "name": "Reverse Lunge",
+      "equipment": "Bodyweight",
+      "query": "reverse lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "lunge",
+      "name": "Forward Lunge",
+      "equipment": "Bodyweight",
+      "query": "forward lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "plank",
+      "name": "Plank",
+      "equipment": "Bodyweight",
+      "query": "plank",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "burpee",
+      "name": "Burpee",
+      "equipment": "Bodyweight",
+      "query": "burpee",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "mountain_climber",
+      "name": "Mountain Climber",
+      "equipment": "Bodyweight",
+      "query": "mountain climber",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bear_crawl",
+      "name": "Bear Crawl",
+      "equipment": "Bodyweight",
+      "query": "bear crawl",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "side_plank",
+      "name": "Side Plank",
+      "equipment": "Bodyweight",
+      "query": "side plank",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "plank_shoulder_tap",
+      "name": "Plank Shoulder Tap",
+      "equipment": "Bodyweight",
+      "query": "plank shoulder tap",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "split_squat",
+      "name": "Split Squat",
+      "equipment": "Bodyweight",
+      "query": "split squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "lateral_lunge",
+      "name": "Lateral Lunge",
+      "equipment": "Bodyweight",
+      "query": "lateral lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "single_leg_glute_bridge",
+      "name": "Single-Leg Glute Bridge",
+      "equipment": "Bodyweight",
+      "query": "single leg glute bridge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "inchworm",
+      "name": "Inchworm",
+      "equipment": "Bodyweight",
+      "query": "inchworm",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dead_bug",
+      "name": "Dead Bug",
+      "equipment": "Bodyweight",
+      "query": "dead bug",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "back_squat",
+      "name": "Barbell Back Squat",
+      "equipment": "Barbell",
+      "query": "barbell back squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "front_squat",
+      "name": "Barbell Front Squat",
+      "equipment": "Barbell",
+      "query": "barbell front squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "deadlift",
+      "name": "Barbell Deadlift",
+      "equipment": "Barbell",
+      "query": "barbell deadlift",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "romanian_deadlift",
+      "name": "Romanian Deadlift",
+      "equipment": "Barbell",
+      "query": "romanian deadlift",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bent_over_row",
+      "name": "Bent-Over Row",
+      "equipment": "Barbell",
+      "query": "bent over row",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "overhead_press",
+      "name": "Overhead Press",
+      "equipment": "Barbell",
+      "query": "overhead press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "push_press",
+      "name": "Push Press",
+      "equipment": "Barbell",
+      "query": "push press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "thruster",
+      "name": "Barbell Thruster",
+      "equipment": "Barbell",
+      "query": "barbell thruster",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "hang_power_clean",
+      "name": "Hang Power Clean",
+      "equipment": "Barbell",
+      "query": "hang power clean",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "clean_and_press",
+      "name": "Clean & Press",
+      "equipment": "Barbell",
+      "query": "clean press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "clean_and_jerk",
+      "name": "Clean & Jerk",
+      "equipment": "Barbell",
+      "query": "clean jerk",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "snatch",
+      "name": "Power Snatch",
+      "equipment": "Barbell",
+      "query": "power snatch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "sumo_high_pull",
+      "name": "Sumo Deadlift High Pull",
+      "equipment": "Barbell",
+      "query": "sumo deadlift high pull",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "overhead_squat",
+      "name": "Overhead Squat",
+      "equipment": "Barbell",
+      "query": "overhead squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_goblet_squat",
+      "name": "Dumbbell Goblet Squat",
+      "equipment": "Dumbbells",
+      "query": "dumbbell goblet squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_reverse_lunge",
+      "name": "Dumbbell Reverse Lunge",
+      "equipment": "Dumbbells",
+      "query": "dumbbell reverse lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_split_squat",
+      "name": "Dumbbell Split Squat",
+      "equipment": "Dumbbells",
+      "query": "dumbbell split squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_romanian_deadlift",
+      "name": "Dumbbell Romanian Deadlift",
+      "equipment": "Dumbbells",
+      "query": "dumbbell romanian deadlift",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_row",
+      "name": "One-Arm Dumbbell Row",
+      "equipment": "Dumbbells",
+      "query": "one arm dumbbell row",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_floor_press",
+      "name": "Dumbbell Floor Press",
+      "equipment": "Dumbbells",
+      "query": "dumbbell floor press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_shoulder_press",
+      "name": "Dumbbell Shoulder Press",
+      "equipment": "Dumbbells",
+      "query": "dumbbell shoulder press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_thruster",
+      "name": "Dumbbell Thruster",
+      "equipment": "Dumbbells",
+      "query": "dumbbell thruster",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "renegade_row",
+      "name": "Renegade Row",
+      "equipment": "Dumbbells",
+      "query": "renegade row",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_clean_press",
+      "name": "Dumbbell Clean & Press",
+      "equipment": "Dumbbells",
+      "query": "dumbbell clean press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_snatch",
+      "name": "Dumbbell Snatch",
+      "equipment": "Dumbbells",
+      "query": "dumbbell snatch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "farmer_carry",
+      "name": "Farmer Carry",
+      "equipment": "Dumbbells",
+      "query": "farmer carry",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "suitcase_carry",
+      "name": "Suitcase Carry",
+      "equipment": "Dumbbells",
+      "query": "suitcase carry",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_swing",
+      "name": "Kettlebell Swing",
+      "equipment": "Kettlebell",
+      "query": "kettlebell swing",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_goblet_squat",
+      "name": "Kettlebell Goblet Squat",
+      "equipment": "Kettlebell",
+      "query": "kettlebell goblet squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_clean",
+      "name": "Kettlebell Clean",
+      "equipment": "Kettlebell",
+      "query": "kettlebell clean",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_clean_press",
+      "name": "Kettlebell Clean & Press",
+      "equipment": "Kettlebell",
+      "query": "kettlebell clean press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_snatch",
+      "name": "Kettlebell Snatch",
+      "equipment": "Kettlebell",
+      "query": "kettlebell snatch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "turkish_get_up",
+      "name": "Turkish Get-Up",
+      "equipment": "Kettlebell",
+      "query": "turkish get up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_row",
+      "name": "TRX Row",
+      "equipment": "TRX",
+      "query": "trx row",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_squat",
+      "name": "TRX Squat",
+      "equipment": "TRX",
+      "query": "trx squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_reverse_lunge",
+      "name": "TRX Reverse Lunge",
+      "equipment": "TRX",
+      "query": "trx reverse lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_chest_press",
+      "name": "TRX Chest Press",
+      "equipment": "TRX",
+      "query": "trx chest press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_row",
+      "name": "Resistance Band Row",
+      "equipment": "Resistance Bands",
+      "query": "resistance band row",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_pallof_press",
+      "name": "Pallof Press",
+      "equipment": "Resistance Bands",
+      "query": "pallof press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_squat_press",
+      "name": "Band Squat to Press",
+      "equipment": "Resistance Bands",
+      "query": "band squat to press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "cable_row",
+      "name": "Cable Row",
+      "equipment": "Cables",
+      "query": "cable row",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "cable_woodchop",
+      "name": "Cable Woodchop",
+      "equipment": "Cables",
+      "query": "cable woodchop",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "battle_rope_waves",
+      "name": "Battle Rope Waves",
+      "equipment": "Battle Ropes",
+      "query": "battle rope waves",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "battle_rope_slam",
+      "name": "Battle Rope Slam",
+      "equipment": "Battle Ropes",
+      "query": "battle rope slam",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bosu_squat",
+      "name": "BOSU Squat",
+      "equipment": "BOSU",
+      "query": "bosu squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bosu_push_up",
+      "name": "BOSU Push-Up",
+      "equipment": "BOSU",
+      "query": "bosu push up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "wall_sit",
+      "name": "Wall Sit",
+      "equipment": "Bodyweight",
+      "query": "wall sit",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "jump_squat",
+      "name": "Jump Squat",
+      "equipment": "Bodyweight",
+      "query": "jump squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "pulse_squat",
+      "name": "Pulse Squat",
+      "equipment": "Bodyweight",
+      "query": "pulse squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "cossack_squat",
+      "name": "Cossack Squat",
+      "equipment": "Bodyweight",
+      "query": "cossack squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "curtsy_lunge",
+      "name": "Curtsy Lunge",
+      "equipment": "Bodyweight",
+      "query": "curtsy lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "walking_lunge",
+      "name": "Walking Lunge",
+      "equipment": "Bodyweight",
+      "query": "walking lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "lunge_to_knee_drive",
+      "name": "Lunge to Knee Drive",
+      "equipment": "Bodyweight",
+      "query": "lunge to knee drive",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "lateral_step_up",
+      "name": "Lateral Step-Up",
+      "equipment": "Bench/Step",
+      "query": "lateral step up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "step_up",
+      "name": "Step-Up",
+      "equipment": "Bench/Step",
+      "query": "step up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "step_up_knee_drive",
+      "name": "Step-Up to Knee Drive",
+      "equipment": "Bench/Step",
+      "query": "step up to knee drive",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bulgarian_split_squat",
+      "name": "Bulgarian Split Squat",
+      "equipment": "Bench/Step",
+      "query": "bulgarian split squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "single_leg_rdl",
+      "name": "Single-Leg Romanian Deadlift",
+      "equipment": "Bodyweight",
+      "query": "single leg romanian deadlift",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "glute_bridge",
+      "name": "Glute Bridge",
+      "equipment": "Bodyweight",
+      "query": "glute bridge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "hip_thrust",
+      "name": "Hip Thrust",
+      "equipment": "Bench/Step",
+      "query": "hip thrust",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "single_leg_hip_thrust",
+      "name": "Single-Leg Hip Thrust",
+      "equipment": "Bench/Step",
+      "query": "single leg hip thrust",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "standing_calf_raise",
+      "name": "Standing Calf Raise",
+      "equipment": "Bodyweight",
+      "query": "standing calf raise",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "single_leg_calf_raise",
+      "name": "Single-Leg Calf Raise",
+      "equipment": "Bodyweight",
+      "query": "single leg calf raise",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "lateral_shuffle",
+      "name": "Lateral Shuffle",
+      "equipment": "Bodyweight",
+      "query": "lateral shuffle",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "skater_step",
+      "name": "Skater Step",
+      "equipment": "Bodyweight",
+      "query": "skater step",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "skater_jump",
+      "name": "Skater Jump",
+      "equipment": "Bodyweight",
+      "query": "skater jump",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "incline_push_up",
+      "name": "Incline Push-Up",
+      "equipment": "Bench/Step",
+      "query": "incline push up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "decline_push_up",
+      "name": "Decline Push-Up",
+      "equipment": "Bench/Step",
+      "query": "decline push up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "close_grip_push_up",
+      "name": "Close-Grip Push-Up",
+      "equipment": "Bodyweight",
+      "query": "close grip push up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "wide_push_up",
+      "name": "Wide Push-Up",
+      "equipment": "Bodyweight",
+      "query": "wide push up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "pike_push_up",
+      "name": "Pike Push-Up",
+      "equipment": "Bodyweight",
+      "query": "pike push up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_bench_press",
+      "name": "Dumbbell Bench Press",
+      "equipment": "Dumbbells",
+      "query": "dumbbell bench press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "alternating_dumbbell_press",
+      "name": "Alternating Dumbbell Press",
+      "equipment": "Dumbbells",
+      "query": "alternating dumbbell press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "arnold_press",
+      "name": "Arnold Press",
+      "equipment": "Dumbbells",
+      "query": "arnold press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "single_arm_dumbbell_press",
+      "name": "Single-Arm Dumbbell Shoulder Press",
+      "equipment": "Dumbbells",
+      "query": "single arm dumbbell shoulder press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_lateral_raise",
+      "name": "Dumbbell Lateral Raise",
+      "equipment": "Dumbbells",
+      "query": "dumbbell lateral raise",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_front_raise",
+      "name": "Dumbbell Front Raise",
+      "equipment": "Dumbbells",
+      "query": "dumbbell front raise",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "rear_delt_fly",
+      "name": "Dumbbell Rear Delt Fly",
+      "equipment": "Dumbbells",
+      "query": "dumbbell rear delt fly",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "chest_supported_row",
+      "name": "Chest-Supported Dumbbell Row",
+      "equipment": "Dumbbells",
+      "query": "chest supported dumbbell row",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_pullover",
+      "name": "Dumbbell Pullover",
+      "equipment": "Dumbbells",
+      "query": "dumbbell pullover",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_biceps_curl",
+      "name": "Dumbbell Biceps Curl",
+      "equipment": "Dumbbells",
+      "query": "dumbbell biceps curl",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "hammer_curl",
+      "name": "Hammer Curl",
+      "equipment": "Dumbbells",
+      "query": "hammer curl",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "overhead_triceps_extension",
+      "name": "Overhead Triceps Extension",
+      "equipment": "Dumbbells",
+      "query": "overhead triceps extension",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_triceps_kickback",
+      "name": "Dumbbell Triceps Kickback",
+      "equipment": "Dumbbells",
+      "query": "dumbbell triceps kickback",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_face_pull",
+      "name": "Resistance Band Face Pull",
+      "equipment": "Resistance Bands",
+      "query": "resistance band face pull",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_pull_apart",
+      "name": "Band Pull-Apart",
+      "equipment": "Resistance Bands",
+      "query": "band pull apart",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_chest_press",
+      "name": "Resistance Band Chest Press",
+      "equipment": "Resistance Bands",
+      "query": "resistance band chest press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_shoulder_press",
+      "name": "Resistance Band Shoulder Press",
+      "equipment": "Resistance Bands",
+      "query": "resistance band shoulder press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_biceps_curl",
+      "name": "Resistance Band Biceps Curl",
+      "equipment": "Resistance Bands",
+      "query": "resistance band biceps curl",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_triceps_pressdown",
+      "name": "Resistance Band Triceps Pressdown",
+      "equipment": "Resistance Bands",
+      "query": "resistance band triceps pressdown",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bird_dog",
+      "name": "Bird Dog",
+      "equipment": "Bodyweight",
+      "query": "bird dog",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bird_dog_row",
+      "name": "Bird Dog Row",
+      "equipment": "Dumbbells",
+      "query": "bird dog row",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "hollow_hold",
+      "name": "Hollow Hold",
+      "equipment": "Bodyweight",
+      "query": "hollow hold",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "hollow_rock",
+      "name": "Hollow Rock",
+      "equipment": "Bodyweight",
+      "query": "hollow rock",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "crunch",
+      "name": "Crunch",
+      "equipment": "Bodyweight",
+      "query": "crunch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bicycle_crunch",
+      "name": "Bicycle Crunch",
+      "equipment": "Bodyweight",
+      "query": "bicycle crunch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "reverse_crunch",
+      "name": "Reverse Crunch",
+      "equipment": "Bodyweight",
+      "query": "reverse crunch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "lying_leg_raise",
+      "name": "Lying Leg Raise",
+      "equipment": "Bodyweight",
+      "query": "lying leg raise",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "flutter_kicks",
+      "name": "Flutter Kicks",
+      "equipment": "Bodyweight",
+      "query": "flutter kicks",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "heel_taps",
+      "name": "Heel Taps",
+      "equipment": "Bodyweight",
+      "query": "heel taps",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "russian_twist",
+      "name": "Russian Twist",
+      "equipment": "Bodyweight",
+      "query": "russian twist",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "seated_knee_tuck",
+      "name": "Seated Knee Tuck",
+      "equipment": "Bodyweight",
+      "query": "seated knee tuck",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "plank_knee_to_elbow",
+      "name": "Plank Knee to Elbow",
+      "equipment": "Bodyweight",
+      "query": "plank knee to elbow",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "plank_jack",
+      "name": "Plank Jack",
+      "equipment": "Bodyweight",
+      "query": "plank jack",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "side_plank_reach_through",
+      "name": "Side Plank Reach-Through",
+      "equipment": "Bodyweight",
+      "query": "side plank reach through",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "side_plank_hip_dip",
+      "name": "Side Plank Hip Dip",
+      "equipment": "Bodyweight",
+      "query": "side plank hip dip",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "high_plank_to_forearm",
+      "name": "High Plank to Forearm Plank",
+      "equipment": "Bodyweight",
+      "query": "high plank to forearm plank",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "cross_body_mountain_climber",
+      "name": "Cross-Body Mountain Climber",
+      "equipment": "Bodyweight",
+      "query": "cross body mountain climber",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "slow_mountain_climber",
+      "name": "Slow Mountain Climber",
+      "equipment": "Bodyweight",
+      "query": "slow mountain climber",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bear_plank",
+      "name": "Bear Plank",
+      "equipment": "Bodyweight",
+      "query": "bear plank",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dead_bug_band_pulldown",
+      "name": "Dead Bug with Band Pulldown",
+      "equipment": "Resistance Bands",
+      "query": "dead bug with band pulldown",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "half_kneeling_pallof_press",
+      "name": "Half-Kneeling Pallof Press",
+      "equipment": "Resistance Bands",
+      "query": "half kneeling pallof press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "standing_band_rotation",
+      "name": "Standing Band Rotation",
+      "equipment": "Resistance Bands",
+      "query": "standing band rotation",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_russian_twist",
+      "name": "Dumbbell Russian Twist",
+      "equipment": "Dumbbells",
+      "query": "dumbbell russian twist",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "thruster_single_dumbbell",
+      "name": "Single-Dumbbell Thruster",
+      "equipment": "Dumbbells",
+      "query": "single dumbbell thruster",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "squat_to_press",
+      "name": "Dumbbell Squat to Press",
+      "equipment": "Dumbbells",
+      "query": "dumbbell squat to press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "devil_press",
+      "name": "Devil Press",
+      "equipment": "Dumbbells",
+      "query": "devil press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "man_maker",
+      "name": "Man Maker",
+      "equipment": "Dumbbells",
+      "query": "man maker",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_clean_squat_press",
+      "name": "Dumbbell Clean Squat Press",
+      "equipment": "Dumbbells",
+      "query": "dumbbell clean squat press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_deadlift_high_pull",
+      "name": "Dumbbell Deadlift High Pull",
+      "equipment": "Dumbbells",
+      "query": "dumbbell deadlift high pull",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "burpee_to_box_step",
+      "name": "Burpee to Step-Up",
+      "equipment": "Bench/Step",
+      "query": "burpee to step up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "burpee_broad_jump",
+      "name": "Burpee Broad Jump",
+      "equipment": "Bodyweight",
+      "query": "burpee broad jump",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "squat_thrust",
+      "name": "Squat Thrust",
+      "equipment": "Bodyweight",
+      "query": "squat thrust",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "walkout_push_up",
+      "name": "Walkout to Push-Up",
+      "equipment": "Bodyweight",
+      "query": "walkout to push up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bear_crawl_shoulder_tap",
+      "name": "Bear Crawl Shoulder Tap",
+      "equipment": "Bodyweight",
+      "query": "bear crawl shoulder tap",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "crab_walk",
+      "name": "Crab Walk",
+      "equipment": "Bodyweight",
+      "query": "crab walk",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_deadlift",
+      "name": "Kettlebell Deadlift",
+      "equipment": "Kettlebell",
+      "query": "kettlebell deadlift",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_rdl",
+      "name": "Kettlebell Romanian Deadlift",
+      "equipment": "Kettlebell",
+      "query": "kettlebell romanian deadlift",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_sumo_deadlift",
+      "name": "Kettlebell Sumo Deadlift",
+      "equipment": "Kettlebell",
+      "query": "kettlebell sumo deadlift",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_press",
+      "name": "Kettlebell Strict Press",
+      "equipment": "Kettlebell",
+      "query": "kettlebell strict press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "single_arm_kb_press",
+      "name": "Single-Arm Kettlebell Press",
+      "equipment": "Kettlebell",
+      "query": "single arm kettlebell press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_high_pull",
+      "name": "Kettlebell High Pull",
+      "equipment": "Kettlebell",
+      "query": "kettlebell high pull",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_halo",
+      "name": "Kettlebell Halo",
+      "equipment": "Kettlebell",
+      "query": "kettlebell halo",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_windmill",
+      "name": "Kettlebell Windmill",
+      "equipment": "Kettlebell",
+      "query": "kettlebell windmill",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_rack_carry",
+      "name": "Kettlebell Rack Carry",
+      "equipment": "Kettlebell",
+      "query": "kettlebell rack carry",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_overhead_carry",
+      "name": "Kettlebell Overhead Carry",
+      "equipment": "Kettlebell",
+      "query": "kettlebell overhead carry",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_suitcase_carry",
+      "name": "Kettlebell Suitcase Carry",
+      "equipment": "Kettlebell",
+      "query": "kettlebell suitcase carry",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_front_rack_squat",
+      "name": "Kettlebell Front Rack Squat",
+      "equipment": "Kettlebell",
+      "query": "kettlebell front rack squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_reverse_lunge",
+      "name": "Kettlebell Reverse Lunge",
+      "equipment": "Kettlebell",
+      "query": "kettlebell reverse lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kettlebell_clean_squat_press",
+      "name": "Kettlebell Clean Squat Press",
+      "equipment": "Kettlebell",
+      "query": "kettlebell clean squat press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_step_up",
+      "name": "Dumbbell Step-Up",
+      "equipment": "Dumbbells",
+      "query": "dumbbell step up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_lateral_lunge",
+      "name": "Dumbbell Lateral Lunge",
+      "equipment": "Dumbbells",
+      "query": "dumbbell lateral lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_bulgarian_split_squat",
+      "name": "Dumbbell Bulgarian Split Squat",
+      "equipment": "Dumbbells",
+      "query": "dumbbell bulgarian split squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_single_leg_rdl",
+      "name": "Dumbbell Single-Leg Romanian Deadlift",
+      "equipment": "Dumbbells",
+      "query": "dumbbell single leg romanian deadlift",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_hip_thrust",
+      "name": "Dumbbell Hip Thrust",
+      "equipment": "Dumbbells",
+      "query": "dumbbell hip thrust",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "dumbbell_calf_raise",
+      "name": "Dumbbell Calf Raise",
+      "equipment": "Dumbbells",
+      "query": "dumbbell calf raise",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_lateral_walk",
+      "name": "Band Lateral Walk",
+      "equipment": "Resistance Bands",
+      "query": "band lateral walk",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_monster_walk",
+      "name": "Band Monster Walk",
+      "equipment": "Resistance Bands",
+      "query": "band monster walk",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_glute_bridge",
+      "name": "Band Glute Bridge",
+      "equipment": "Resistance Bands",
+      "query": "band glute bridge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_clamshell",
+      "name": "Band Clamshell",
+      "equipment": "Resistance Bands",
+      "query": "band clamshell",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_deadlift",
+      "name": "Resistance Band Deadlift",
+      "equipment": "Resistance Bands",
+      "query": "resistance band deadlift",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_good_morning",
+      "name": "Resistance Band Good Morning",
+      "equipment": "Resistance Bands",
+      "query": "resistance band good morning",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_reverse_lunge",
+      "name": "Resistance Band Reverse Lunge",
+      "equipment": "Resistance Bands",
+      "query": "resistance band reverse lunge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_lateral_raise",
+      "name": "Resistance Band Lateral Raise",
+      "equipment": "Resistance Bands",
+      "query": "resistance band lateral raise",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "band_external_rotation",
+      "name": "Band External Rotation",
+      "equipment": "Resistance Bands",
+      "query": "band external rotation",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_y_raise",
+      "name": "TRX Y Raise",
+      "equipment": "TRX",
+      "query": "trx y raise",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_face_pull",
+      "name": "TRX Face Pull",
+      "equipment": "TRX",
+      "query": "trx face pull",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_hamstring_curl",
+      "name": "TRX Hamstring Curl",
+      "equipment": "TRX",
+      "query": "trx hamstring curl",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_glute_bridge",
+      "name": "TRX Glute Bridge",
+      "equipment": "TRX",
+      "query": "trx glute bridge",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_plank",
+      "name": "TRX Plank",
+      "equipment": "TRX",
+      "query": "trx plank",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_knee_tuck",
+      "name": "TRX Knee Tuck",
+      "equipment": "TRX",
+      "query": "trx knee tuck",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "trx_pike",
+      "name": "TRX Pike",
+      "equipment": "TRX",
+      "query": "trx pike",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "cable_pallof_press",
+      "name": "Cable Pallof Press",
+      "equipment": "Cables",
+      "query": "cable pallof press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "cable_chest_press",
+      "name": "Cable Chest Press",
+      "equipment": "Cables",
+      "query": "cable chest press",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "cable_face_pull",
+      "name": "Cable Face Pull",
+      "equipment": "Cables",
+      "query": "cable face pull",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "cable_rotation",
+      "name": "Cable Rotation",
+      "equipment": "Cables",
+      "query": "cable rotation",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "battle_rope_alternating_waves",
+      "name": "Battle Rope Alternating Waves",
+      "equipment": "Battle Ropes",
+      "query": "battle rope alternating waves",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "battle_rope_side_waves",
+      "name": "Battle Rope Side-to-Side Waves",
+      "equipment": "Battle Ropes",
+      "query": "battle rope side to side waves",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "battle_rope_power_slam",
+      "name": "Battle Rope Power Slam",
+      "equipment": "Battle Ropes",
+      "query": "battle rope power slam",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "box_squat",
+      "name": "Box Squat",
+      "equipment": "Bench/Step",
+      "query": "box squat",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bench_dip",
+      "name": "Bench Dip",
+      "equipment": "Bench/Step",
+      "query": "bench dip",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bench_push_up",
+      "name": "Bench Push-Up",
+      "equipment": "Bench/Step",
+      "query": "bench push up",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "hip_flexor_stretch",
+      "name": "Hip Flexor Stretch",
+      "equipment": "Bodyweight",
+      "query": "hip flexor stretch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "hamstring_sweep",
+      "name": "Hamstring Sweep",
+      "equipment": "Bodyweight",
+      "query": "hamstring sweep",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "worlds_greatest_stretch",
+      "name": "World’s Greatest Stretch",
+      "equipment": "Bodyweight",
+      "query": "worlds greatest stretch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "thoracic_rotation",
+      "name": "Quadruped Thoracic Rotation",
+      "equipment": "Bodyweight",
+      "query": "quadruped thoracic rotation",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "cat_cow",
+      "name": "Cat-Cow",
+      "equipment": "Bodyweight",
+      "query": "cat cow",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "ankle_rocker",
+      "name": "Ankle Rocker",
+      "equipment": "Bodyweight",
+      "query": "ankle rocker",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "shoulder_circles",
+      "name": "Shoulder Circles",
+      "equipment": "Bodyweight",
+      "query": "shoulder circles",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "arm_swings",
+      "name": "Arm Swings",
+      "equipment": "Bodyweight",
+      "query": "arm swings",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "glute_activation_bridge",
+      "name": "Glute Bridge Activation",
+      "equipment": "Bodyweight",
+      "query": "glute bridge activation",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "bodyweight_good_morning",
+      "name": "Bodyweight Good Morning",
+      "equipment": "Bodyweight",
+      "query": "bodyweight good morning",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "deep_squat_pry",
+      "name": "Deep Squat Pry",
+      "equipment": "Bodyweight",
+      "query": "deep squat pry",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "calf_stretch",
+      "name": "Standing Calf Stretch",
+      "equipment": "Bodyweight",
+      "query": "standing calf stretch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "childs_pose",
+      "name": "Child’s Pose",
+      "equipment": "Bodyweight",
+      "query": "childs pose",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    },
+    {
+      "athleticoId": "kneeling_lat_stretch",
+      "name": "Kneeling Lat Stretch",
+      "equipment": "Bench/Step",
+      "query": "kneeling lat stretch",
+      "status": "pending-dataset-match",
+      "datasetId": null,
+      "referenceMedia": null
+    }
+  ]
+}
