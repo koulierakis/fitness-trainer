@@ -26,7 +26,7 @@ function App(){
  const exercises=useMemo(()=>{
    const byName=new Map(gif.map(x=>[norm(x.name),x]));
    const threeD=new Map(remote3d.filter(x=>x.media3d).map(x=>[x.openGymId,x]));
-   const canonical=canonicalExercises.map(x=>{const lookup=new Map([...byName.entries()].map(([k,v])=>[k,v]));const g=resolveCuratedGif({...x,name:norm(x.name)},lookup)||byName.get(norm(x.gr)),m=threeD.get(x.openGymId);return{...(g||{}),...(m||{}),...x,media:g?.media||x.media,media3d:m?.media3d||x.media3d,level:g?.level||x.level||'Beginner'}});
+   const canonical=canonicalExercises.map(x=>{const g=resolveCuratedGif({...x,name:norm(x.name)},byName)||byName.get(norm(x.gr)),m=threeD.get(x.openGymId);return{...(g||{}),...(m||{}),...x,media:g?.media||x.media,media3d:m?.media3d||x.media3d,level:g?.level||x.level||'Beginner'}});
    const names=new Set(canonical.map(x=>norm(x.name)));
    const gifOnly=gif.filter(x=>!names.has(norm(x.name)));
    return[...canonical,...gifOnly];
