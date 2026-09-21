@@ -1,7 +1,7 @@
 name: Functional QA
 on:
   push:
-    branches: [main, work/functional-gif-library, work/functional-full-1500-gif-catalog]
+    branches: [main, work/functional-gif-library, work/functional-full-1500-gif-catalog, work/functional-library-completion]
   pull_request:
     branches: [main]
 jobs:
@@ -21,4 +21,4 @@ jobs:
           node --input-type=module -e "import('./src/programs60.js').then(m=>{if(!m.validatePrograms())process.exit(1);console.log('Programs:',m.programs.length,'all 3600s')})"
       - name: Animated GIF taxonomy QA
         run: |
-          node --input-type=module -e "import('./src/dataset.js').then(m=>{const x=m.toFitnessExercise({exerciseId:'qa1',name:'dumbbell thruster',bodyParts:['upper arms'],targetMuscles:['triceps'],equipments:['dumbbell'],instructions:['Control the movement'],secondaryMuscles:[],gifUrl:'https://example.com/demo.gif'});if(x.level!=='Advanced'||x.equipment!=='Dumbbells'||x.group!=='Χέρια'||x.media.type!=='animated-gif')process.exit(1);const s=m.toFitnessExercise({exerciseId:'qa2',name:'hamstring stretch',bodyParts:['upper legs'],targetMuscles:['hamstrings'],equipments:['body weight'],instructions:['Hold'],gifUrl:'https://example.com/stretch.gif'});if(s.group!=='Stretching'||s.goal!=='Stretching')process.exit(1);console.log('GIF taxonomy OK')})"
+          node --input-type=module -e "import('./src/dataset.js').then(m=>{const x=m.toFitnessExercise({exerciseId:'qa1',name:'dumbbell thruster',bodyParts:['upper arms'],targetMuscles:['triceps'],equipments:['dumbbell'],instructions:['Control the movement'],secondaryMuscles:[],gifUrl:'https://example.com/demo.gif'});if(x.level!=='Advanced'||x.equipment!=='Dumbbells'||x.group!=='Χέρια'||x.media.type!=='animated-gif')process.exit(1);const s=m.toFitnessExercise({exerciseId:'qa2',name:'hamstring stretch',bodyParts:['upper legs'],targetMuscles:['hamstrings'],equipments:['body weight'],instructions:['Hold'],gifUrl:'https://example.com/stretch.gif'});if(s.group!=='Stretching'||s.goal!=='Stretching')process.exit(1);const i=m.toFitnessExercise({exerciseId:'qa3',name:'dumbbell curl',bodyParts:['upper arms'],targetMuscles:['biceps'],equipments:['dumbbell'],instructions:['Curl'],gifUrl:'https://example.com/curl.gif'});if(i.level!=='Intermediate')process.exit(1);console.log('GIF taxonomy OK')})"

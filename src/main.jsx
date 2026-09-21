@@ -32,7 +32,7 @@ function App(){
  },[gif,remote3d]);
  const countMap=key=>exercises.reduce((a,x)=>{const v=x[key];if(v)a[v]=(a[v]||0)+1;return a},{});
  const options=key=>{const c=countMap(key);return[{value:'Όλα',label:`Όλα (${exercises.length})`},...Object.entries(c).filter(([,n])=>n>0).sort((a,b)=>b[1]-a[1]).map(([value,n])=>({value,label:`${value} (${n})`}))]};
- const levelOptions=()=>{const c=countMap('level');return[{value:'Όλα',label:`Όλα (${exercises.length})`},...['Beginner','Advanced'].filter(x=>c[x]>0).map(value=>({value,label:`${value} (${c[value]})`}))]};
+ const levelOptions=()=>{const c=countMap('level');return[{value:'Όλα',label:`Όλα (${exercises.length})`},...['Beginner','Intermediate','Advanced'].filter(x=>c[x]>0).map(value=>({value,label:`${value} (${c[value]})`}))]};
  const filtered=useMemo(()=>exercises.filter(x=>{const hay=norm([x.name,x.gr,x.group,x.equipment,x.goal,x.movement,...(x.primaryMuscles||[]),...(x.secondaryMuscles||[])].join(' '));return(!q||hay.includes(norm(q)))&&(equipment==='Όλα'||x.equipment===equipment)&&(group==='Όλα'||x.group===group)&&(goal==='Όλα'||x.goal===goal)&&(level==='Όλα'||x.level===level)}),[exercises,q,equipment,group,goal,level]);
  const visiblePrograms=useMemo(()=>programs.filter(p=>p.level===pLevel&&p.type===pType&&(pEquipment==='Όλα'||p.equipment.includes?.(pEquipment)||p.equipment==='Mixed')),[pLevel,pType,pEquipment]);
  const timeline=active?buildTimeline(active,exercises):[],phase=timeline[cursor];
