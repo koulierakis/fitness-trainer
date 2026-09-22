@@ -11,7 +11,9 @@
     "verify:functional-media": "node scripts/verify-functional-media.mjs",
     "plan:functional-3d": "node scripts/build-functional-animation-queue.mjs",
     "remotion:studio": "remotion studio",
-    "remotion:render": "remotion render"
+    "remotion:render": "remotion render",
+    "validate:visual-manifest": "python scripts/validate_visual_manifest.py",
+    "validate:visual-manifest:strict": "python scripts/validate_visual_manifest.py --strict"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
