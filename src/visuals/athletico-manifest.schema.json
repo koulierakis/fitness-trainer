@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Athletico Production Visual Manifest",
+  "type": "object",
+  "required": ["exercises"],
+  "properties": {
+    "exercises": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["frames"],
+        "properties": {
+          "equipment": {},
+          "equipment_required": {},
+          "camera": {},
+          "camera_angle": {"type": "string"},
+          "constraints": {"type": "array","items":{"type":"string"}},
+          "frames": {
+            "type": "object",
+            "required": ["start","execution","return"],
+            "properties": {
+              "start": {"$ref":"#/$defs/frame"},
+              "execution": {"$ref":"#/$defs/frame"},
+              "return": {"$ref":"#/$defs/frame"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "frame": {
+      "type": "object",
+      "required": ["asset","prompt"],
+      "properties": {
+        "asset": {"type":"string","pattern":"\\.webp$"},
+        "prompt": {"type":"string","minLength":1},
+        "constraints": {"type":"array","items":{"type":"string"}},
+        "pose_control": {"type":["object","null"]},
+        "qc_status": {"type":"string"}
+      }
+    }
+  }
+}
