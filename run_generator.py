@@ -24,7 +24,9 @@ def manifest_tasks(path,exercise_ids=None):
     for exercise_id,spec in exercises.items():
         if selected and exercise_id not in selected:continue
         for phase in PHASES:
-            frame=spec.get("frames",{}).get(phase,{})
+            frame=dict(spec.get("frames",{}).get(phase,{}))
+            if frame.get("pose_template") and not frame.get("control_reference"):
+                frame["control_reference"]=pose_data_uri(frame["pose_template"],int(frame.get("width") or spec.get("width") or 1344),int(frame.get("height") or spec.get("height") or 768))
             prompt=frame.get("prompt") or frame.get("generation_prompt") or spec.get("prompt") or ""
             tasks.append({"exercise_id":exercise_id,"phase":phase,"target_filename":_target(frame.get("asset"),exercise_id,phase),
                           "prompt":prompt,"frame":frame,"exercise":spec,
@@ -32,14 +34,14 @@ def manifest_tasks(path,exercise_ids=None):
                           "height":int(frame.get("height") or spec.get("height") or 768)})
     return tasks
 
-def validate_tasks(tasks):
+def validate_tasks(tasks,require_character=True):
     errors=[]
     for t in tasks:
         f=t["frame"];tag=t["exercise_id"]+":"+t["phase"]
         if not t["target_filename"].lower().endswith(".webp"):errors.append(tag+": invalid output path")
         if not t["prompt"].strip():errors.append(tag+": missing prompt")
         if not (f.get("pose_reference") or f.get("control_reference") or f.get("pose_template")):errors.append(tag+": missing pose/control reference")
-        if not (f.get("character_reference") or f.get("character_lora") or t["exercise"].get("character_reference") or t["exercise"].get("character_lora")):
+        if require_character and not (f.get("character_reference") or f.get("character_lora") or t["exercise"].get("character_reference") or t["exercise"].get("character_lora")):
             errors.append(tag+": missing character reference/LoRA")
         refs=[str(f.get(k) or "") for k in ("pose_reference","control_reference","character_reference")]
         if any("repdb" in x.lower() for x in refs):errors.append(tag+": RepDB conditioning is forbidden")
@@ -65,7 +67,7 @@ def main():
     tasks=manifest_tasks(a.manifest,requested)
     if a.limit is not None:
         ids=list(dict.fromkeys(t["exercise_id"] for t in tasks));keep=set(ids[:a.limit]);tasks=[t for t in tasks if t["exercise_id"] in keep]
-    errors=validate_tasks(tasks);ids=list(dict.fromkeys(t["exercise_id"] for t in tasks))
+    errors=validate_tasks(tasks,require_character=(a.backend=="runware"));ids=list(dict.fromkeys(t["exercise_id"] for t in tasks))
     if not tasks:errors.append("manifest contains no selectable exercise/frame records")
     if requested:
         absent=[x for x in requested if x not in ids]
@@ -82,7 +84,7 @@ def main():
       "output_paths":[t["target_filename"] for t in tasks],"missing_or_invalid_inputs":errors,"configuration_blockers":config_errors,
       "base_model":a.model,"controlnet_model":a.controlnet_model,"openpose_preprocessor":OPENPOSE_PREPROCESSOR,
       "ip_adapter_model":a.ip_adapter_model,"character_lora_model":a.character_lora_model,
-      "max_cost_usd":a.max_cost_usd,"estimated_pilot_cost_usd":"unknown until compatible base model/adapter are selected; hard ceiling is --max-cost-usd",
+      "max_cost_usd":a.max_cost_usd,"estimated_pilot_cost_usd":("0.00 local API cost" if a.backend=="comfyui" else "unknown until compatible base model/adapter are selected; hard ceiling is --max-cost-usd"),
       "api_key_present":bool(os.environ.get("RUNWARE_API_KEY")) if a.backend=="runware" else None,"comfyui_url":a.comfyui_url,"character_file":a.character_file}
     if a.dry_run:
         print(json.dumps(report,indent=2,ensure_ascii=False));return 1 if (errors or config_errors) else 0
