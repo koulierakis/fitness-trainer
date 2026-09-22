@@ -26,5 +26,12 @@ jobs:
         run: |
           node --input-type=module -e "import('./src/dataset.js').then(m=>{const x=m.toFitnessExercise({exerciseId:'qa1',name:'dumbbell thruster',bodyParts:['upper arms'],targetMuscles:['triceps'],equipments:['dumbbell'],instructions:['Control the movement'],secondaryMuscles:[],gifUrl:'https://example.com/demo.gif'});if(x.level!=='Advanced'||x.equipment!=='Dumbbells'||x.group!=='Χέρια'||x.media.type!=='animated-gif')process.exit(1);const s=m.toFitnessExercise({exerciseId:'qa2',name:'hamstring stretch',bodyParts:['upper legs'],targetMuscles:['hamstrings'],equipments:['body weight'],instructions:['Hold'],gifUrl:'https://example.com/stretch.gif'});if(s.group!=='Stretching'||s.goal!=='Stretching')process.exit(1);console.log('GIF taxonomy OK')})"
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install visual pipeline dependencies
+        run: python -m pip install -r requirements-visual.txt
       - name: Visual pipeline unit tests
-        run: python -m unittest tests.test_visual_pipeline
+        run: |
+          python -m unittest tests.test_visual_pipeline
+          python -m pytest -q test_runware_pipeline.py
