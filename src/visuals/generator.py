@@ -13,7 +13,7 @@ class CostLimitExceeded(PermanentInferenceError): pass
 
 class VisualQualityControl:
     @staticmethod
-    def validate_image_integrity(file_path: str,target_res: Tuple[int,int]=(1024,1024)):
+    def validate_image_integrity(file_path: str, target_res: Tuple[int,int]=(1344,768)):
         p=Path(file_path)
         if not p.exists(): return False,"missing"
         if p.stat().st_size<10*1024: return False,"file-too-small"
@@ -66,6 +66,7 @@ class AthleticoProductionGenerator:
           "prompt_sha256":hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
           "character_reference_id":meta.get("character_reference_id"),"character_mode":meta.get("character_mode"),
           "pose_reference_id":meta.get("pose_reference_id"),"control_reference_id":meta.get("control_reference_id"),
+          "openpose_preprocessor_id":meta.get("openpose_preprocessor_id"),
           "controlnet_model_id":meta.get("controlnet_model_id"),"ip_adapter_model_id":meta.get("ip_adapter_model_id"),
           "character_lora_model_id":meta.get("character_lora_model_id"),"runware_task_uuid":meta.get("task_uuid"),
           "runware_image_uuid":meta.get("image_uuid"),"generation_time_s":meta.get("generation_time_s"),
@@ -78,7 +79,8 @@ class AthleticoProductionGenerator:
         self.engine.initialize_pipeline()
         for i,task in enumerate(tasks,1):
             final=self.output_dir/task["target_filename"];final.parent.mkdir(parents=True,exist_ok=True)
-            ok,_=VisualQualityControl.validate_image_integrity(str(final))
+            expected=(int(task.get("width",1344)),int(task.get("height",768)))
+            ok,_=VisualQualityControl.validate_image_integrity(str(final),expected)
             if ok and self.resume:
                 print("[-] "+str(i)+"/"+str(len(tasks))+" existing valid asset skipped: "+str(final));continue
             if ok and not self.resume:raise PermanentInferenceError("refusing to overwrite existing production asset without --resume: "+str(final))
@@ -88,7 +90,7 @@ class AthleticoProductionGenerator:
                 if self.max_cost_usd is not None and self.session_cost_usd+frame_cost>self.max_cost_usd:
                     raise CostLimitExceeded("cost ceiling $%.4f would be exceeded"%self.max_cost_usd)
                 tmp=final.with_suffix(".tmp.webp");image.convert("RGB").save(tmp,"WEBP",quality=90,method=6)
-                ok,msg=VisualQualityControl.validate_image_integrity(str(tmp))
+                ok,msg=VisualQualityControl.validate_image_integrity(str(tmp),expected)
                 if not ok:
                     tmp.unlink(missing_ok=True);self.log_failure(task,msg,"AUTOMATED_QC",False);continue
                 os.replace(tmp,final);self.session_cost_usd+=frame_cost;self.log_success(task,msg)
