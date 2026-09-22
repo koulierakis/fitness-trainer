@@ -1,0 +1,1 @@
+Pilot assets use: <exercise-folder>/{start,execution,return}.webp. Do not remove existing GIF/3D media.\n
