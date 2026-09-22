@@ -7,7 +7,9 @@
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "verify:3d": "node scripts/verify-3d-assets.mjs"
+    "verify:3d": "node scripts/verify-3d-assets.mjs",
+    "remotion:studio": "remotion studio",
+    "remotion:render": "remotion render"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
@@ -17,7 +19,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "three": "^0.170.0",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "remotion": "^4.0.0"
   },
   "devDependencies": {}
 }
