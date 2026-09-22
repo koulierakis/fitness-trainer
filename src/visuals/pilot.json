@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "description": "Controlled Runware pilot: difficult multi-phase, unilateral, equipment-dependent and isometric exercises.",
+  "exercise_ids": [
+    "local:clean_and_jerk",
+    "local:snatch",
+    "local:turkish_get_up",
+    "local:dumbbell_single_leg_rdl",
+    "local:kettlebell_windmill",
+    "local:trx_pike",
+    "local:cable_woodchop",
+    "local:bosu_squat",
+    "local:wall_sit",
+    "local:hollow_hold"
+  ],
+  "expected_frames": 30,
+  "conditioning_policy": {
+    "pose_required_for_every_frame": true,
+    "repdb_conditioning_forbidden": true,
+    "character_reference_or_lora_required": true
+  }
+}
