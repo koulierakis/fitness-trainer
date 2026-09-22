@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "purpose": "Controlled Runware pilot selection only. No paid generation until all 30 frames have valid pose/control and character conditioning.",
+  "exercise_ids": [
+    "local:dumbbell_single_leg_rdl",
+    "local:turkish_get_up",
+    "local:clean_and_jerk",
+    "local:snatch",
+    "local:overhead_squat",
+    "local:renegade_row",
+    "local:devil_press",
+    "local:trx_pike",
+    "local:kettlebell_windmill",
+    "local:hollow_hold"
+  ],
+  "coverage": {
+    "unilateral": [
+      "local:dumbbell_single_leg_rdl",
+      "local:turkish_get_up"
+    ],
+    "equipment_dependent": [
+      "local:trx_pike",
+      "local:kettlebell_windmill",
+      "local:renegade_row"
+    ],
+    "multi_phase": [
+      "local:clean_and_jerk",
+      "local:snatch",
+      "local:devil_press",
+      "local:turkish_get_up"
+    ],
+    "isometric": [
+      "local:hollow_hold"
+    ],
+    "stability": [
+      "local:overhead_squat"
+    ]
+  },
+  "frames": [
+    "start",
+    "execution",
+    "return"
+  ],
+  "expected_frame_count": 30,
+  "conditioning_policy": "Every frame requires pose_reference or control_reference and character_reference or character_lora. RepDB is forbidden."
+}
