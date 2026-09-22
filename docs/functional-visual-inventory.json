@@ -1,0 +1,3628 @@
+{
+  "generatedFrom": "src/data.js@work/functional-200-curated",
+  "exactTotal": 201,
+  "notes": {
+    "level": "Canonical rows do not store level; runtime app derives/defaults it when media is merged.",
+    "existingMedia": "Canonical rows do not embed media; current runtime merges verified GIF/3D when available and otherwise uses MotionPreview."
+  },
+  "exercises": [
+    {
+      "exerciseId": "local:push_up",
+      "name": "Push-Up",
+      "greekName": "Κάμψεις",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:squat",
+      "name": "Squat",
+      "greekName": "Καθίσματα",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:reverse_lunge",
+      "name": "Reverse Lunge",
+      "greekName": "Προβολές πίσω",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:lunge",
+      "name": "Forward Lunge",
+      "greekName": "Προβολές μπροστά",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:plank",
+      "name": "Plank",
+      "greekName": "Σανίδα",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "ISOMETRIC / STATIC"
+    },
+    {
+      "exerciseId": "local:burpee",
+      "name": "Burpee",
+      "greekName": "Burpee",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Full Body",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:mountain_climber",
+      "name": "Mountain Climber",
+      "greekName": "Ορειβάτης",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Locomotion",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:bear_crawl",
+      "name": "Bear Crawl",
+      "greekName": "Bear Crawl",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Locomotion",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:side_plank",
+      "name": "Side Plank",
+      "greekName": "Πλάγια σανίδα",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-lateral flexion",
+      "movementType": "ISOMETRIC / STATIC"
+    },
+    {
+      "exerciseId": "local:plank_shoulder_tap",
+      "name": "Plank Shoulder Tap",
+      "greekName": "Σανίδα με άγγιγμα ώμων",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-rotation",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:split_squat",
+      "name": "Split Squat",
+      "greekName": "Split Squat",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:lateral_lunge",
+      "name": "Lateral Lunge",
+      "greekName": "Πλάγια προβολή",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lateral",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:single_leg_glute_bridge",
+      "name": "Single-Leg Glute Bridge",
+      "greekName": "Μονόποδη γέφυρα γλουτών",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:inchworm",
+      "name": "Inchworm",
+      "greekName": "Inchworm",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Locomotion",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:dead_bug",
+      "name": "Dead Bug",
+      "greekName": "Dead Bug",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:back_squat",
+      "name": "Barbell Back Squat",
+      "greekName": "Back Squat με μπάρα",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:front_squat",
+      "name": "Barbell Front Squat",
+      "greekName": "Front Squat με μπάρα",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:deadlift",
+      "name": "Barbell Deadlift",
+      "greekName": "Deadlift με μπάρα",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:romanian_deadlift",
+      "name": "Romanian Deadlift",
+      "greekName": "Romanian Deadlift",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:bent_over_row",
+      "name": "Bent-Over Row",
+      "greekName": "Κωπηλατική σκυφτός με μπάρα",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:overhead_press",
+      "name": "Overhead Press",
+      "greekName": "Πιέσεις πάνω από το κεφάλι",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:push_press",
+      "name": "Push Press",
+      "greekName": "Push Press",
+      "category": "Power",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:thruster",
+      "name": "Barbell Thruster",
+      "greekName": "Thruster με μπάρα",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat + Push",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:hang_power_clean",
+      "name": "Hang Power Clean",
+      "greekName": "Hang Power Clean",
+      "category": "Power",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Olympic / Hinge",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:clean_and_press",
+      "name": "Clean & Press",
+      "greekName": "Clean & Press",
+      "category": "Power",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Olympic + Push",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:clean_and_jerk",
+      "name": "Clean & Jerk",
+      "greekName": "Clean & Jerk",
+      "category": "Power",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Olympic",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:snatch",
+      "name": "Power Snatch",
+      "greekName": "Power Snatch",
+      "category": "Power",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Olympic",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:sumo_high_pull",
+      "name": "Sumo Deadlift High Pull",
+      "greekName": "Sumo Deadlift High Pull",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge + Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:overhead_squat",
+      "name": "Overhead Squat",
+      "greekName": "Overhead Squat",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Barbell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat + Stability",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_goblet_squat",
+      "name": "Dumbbell Goblet Squat",
+      "greekName": "Goblet Squat με αλτήρα",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_reverse_lunge",
+      "name": "Dumbbell Reverse Lunge",
+      "greekName": "Προβολές πίσω με αλτήρες",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:dumbbell_split_squat",
+      "name": "Dumbbell Split Squat",
+      "greekName": "Split Squat με αλτήρες",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:dumbbell_romanian_deadlift",
+      "name": "Dumbbell Romanian Deadlift",
+      "greekName": "Romanian Deadlift με αλτήρες",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_row",
+      "name": "One-Arm Dumbbell Row",
+      "greekName": "Μονόχειρη κωπηλατική με αλτήρα",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:dumbbell_floor_press",
+      "name": "Dumbbell Floor Press",
+      "greekName": "Πιέσεις αλτήρων στο έδαφος",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_shoulder_press",
+      "name": "Dumbbell Shoulder Press",
+      "greekName": "Πιέσεις ώμων με αλτήρες",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_thruster",
+      "name": "Dumbbell Thruster",
+      "greekName": "Thruster με αλτήρες",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat + Push",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:renegade_row",
+      "name": "Renegade Row",
+      "greekName": "Renegade Row",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull + Anti-rotation",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_clean_press",
+      "name": "Dumbbell Clean & Press",
+      "greekName": "Clean & Press με αλτήρες",
+      "category": "Power",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge + Push",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:dumbbell_snatch",
+      "name": "Dumbbell Snatch",
+      "greekName": "Snatch με αλτήρα",
+      "category": "Power",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge + Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:farmer_carry",
+      "name": "Farmer Carry",
+      "greekName": "Μεταφορά Farmer",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Carry",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:suitcase_carry",
+      "name": "Suitcase Carry",
+      "greekName": "Μονόπλευρη μεταφορά Suitcase",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Carry / Anti-lateral",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:kettlebell_swing",
+      "name": "Kettlebell Swing",
+      "greekName": "Kettlebell Swing",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_goblet_squat",
+      "name": "Kettlebell Goblet Squat",
+      "greekName": "Goblet Squat με kettlebell",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_clean",
+      "name": "Kettlebell Clean",
+      "greekName": "Kettlebell Clean",
+      "category": "Power",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge + Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_clean_press",
+      "name": "Kettlebell Clean & Press",
+      "greekName": "Kettlebell Clean & Press",
+      "category": "Power",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge + Push",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:kettlebell_snatch",
+      "name": "Kettlebell Snatch",
+      "greekName": "Kettlebell Snatch",
+      "category": "Power",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge + Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:turkish_get_up",
+      "name": "Turkish Get-Up",
+      "greekName": "Turkish Get-Up",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Ground to Stand",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:trx_row",
+      "name": "TRX Row",
+      "greekName": "Κωπηλατική TRX",
+      "category": "Strength",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:trx_squat",
+      "name": "TRX Squat",
+      "greekName": "Καθίσματα TRX",
+      "category": "Strength",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:trx_reverse_lunge",
+      "name": "TRX Reverse Lunge",
+      "greekName": "Προβολές πίσω TRX",
+      "category": "Stability",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:trx_chest_press",
+      "name": "TRX Chest Press",
+      "greekName": "Πιέσεις στήθους TRX",
+      "category": "Strength",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_row",
+      "name": "Resistance Band Row",
+      "greekName": "Κωπηλατική με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_pallof_press",
+      "name": "Pallof Press",
+      "greekName": "Pallof Press με λάστιχο",
+      "category": "Core",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-rotation",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_squat_press",
+      "name": "Band Squat to Press",
+      "greekName": "Squat to Press με λάστιχο",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat + Push",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:cable_row",
+      "name": "Cable Row",
+      "greekName": "Κωπηλατική τροχαλίας",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Cables",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:cable_woodchop",
+      "name": "Cable Woodchop",
+      "greekName": "Διαγώνια στροφή τροχαλίας",
+      "category": "Core",
+      "level": null,
+      "equipment": "Cables",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Rotation",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:battle_rope_waves",
+      "name": "Battle Rope Waves",
+      "greekName": "Κύματα με battle ropes",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Battle Ropes",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Conditioning",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:battle_rope_slam",
+      "name": "Battle Rope Slam",
+      "greekName": "Slams με battle ropes",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Battle Ropes",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Full Body",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:bosu_squat",
+      "name": "BOSU Squat",
+      "greekName": "Καθίσματα σε BOSU",
+      "category": "Stability",
+      "level": null,
+      "equipment": "BOSU",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat + Balance",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:bosu_push_up",
+      "name": "BOSU Push-Up",
+      "greekName": "Κάμψεις σε BOSU",
+      "category": "Strength",
+      "level": null,
+      "equipment": "BOSU",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push + Stability",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:wall_sit",
+      "name": "Wall Sit",
+      "greekName": "Κάθισμα στον τοίχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Isometric Squat",
+      "movementType": "ISOMETRIC / STATIC"
+    },
+    {
+      "exerciseId": "local:jump_squat",
+      "name": "Jump Squat",
+      "greekName": "Καθίσματα με άλμα",
+      "category": "Power",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat + Jump",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:pulse_squat",
+      "name": "Pulse Squat",
+      "greekName": "Καθίσματα με παλμούς",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:cossack_squat",
+      "name": "Cossack Squat",
+      "greekName": "Κοζάκικα καθίσματα",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lateral Squat",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:curtsy_lunge",
+      "name": "Curtsy Lunge",
+      "greekName": "Διαγώνια προβολή πίσω",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:walking_lunge",
+      "name": "Walking Lunge",
+      "greekName": "Περπατητές προβολές",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:lunge_to_knee_drive",
+      "name": "Lunge to Knee Drive",
+      "greekName": "Προβολή με ανέβασμα γονάτου",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge + Balance",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:lateral_step_up",
+      "name": "Lateral Step-Up",
+      "greekName": "Πλάγιο ανέβασμα σε step",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Step-Up",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:step_up",
+      "name": "Step-Up",
+      "greekName": "Ανέβασμα σε step",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Step-Up",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:step_up_knee_drive",
+      "name": "Step-Up to Knee Drive",
+      "greekName": "Ανέβασμα σε step με γόνατο",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Step-Up + Balance",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:bulgarian_split_squat",
+      "name": "Bulgarian Split Squat",
+      "greekName": "Βουλγάρικο split squat",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Split Squat",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:single_leg_rdl",
+      "name": "Single-Leg Romanian Deadlift",
+      "greekName": "Μονόποδο Romanian Deadlift",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Single-Leg Hinge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:glute_bridge",
+      "name": "Glute Bridge",
+      "greekName": "Γέφυρα γλουτών",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:hip_thrust",
+      "name": "Hip Thrust",
+      "greekName": "Hip Thrust",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:single_leg_hip_thrust",
+      "name": "Single-Leg Hip Thrust",
+      "greekName": "Μονόποδο hip thrust",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Single-Leg Hinge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:standing_calf_raise",
+      "name": "Standing Calf Raise",
+      "greekName": "Άρσεις γάμπας όρθιος",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Calf Raise",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:single_leg_calf_raise",
+      "name": "Single-Leg Calf Raise",
+      "greekName": "Μονόποδες άρσεις γάμπας",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Calf Raise",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:lateral_shuffle",
+      "name": "Lateral Shuffle",
+      "greekName": "Πλάγια βήματα",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lateral Locomotion",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:skater_step",
+      "name": "Skater Step",
+      "greekName": "Πλάγιο βήμα skater",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lateral",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:skater_jump",
+      "name": "Skater Jump",
+      "greekName": "Πλάγιο άλμα skater",
+      "category": "Power",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lateral Jump",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:incline_push_up",
+      "name": "Incline Push-Up",
+      "greekName": "Κάμψεις με τα χέρια ψηλά",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:decline_push_up",
+      "name": "Decline Push-Up",
+      "greekName": "Κάμψεις με τα πόδια ψηλά",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:close_grip_push_up",
+      "name": "Close-Grip Push-Up",
+      "greekName": "Κλειστές κάμψεις",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Τρικέφαλοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:wide_push_up",
+      "name": "Wide Push-Up",
+      "greekName": "Ανοιχτές κάμψεις",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:pike_push_up",
+      "name": "Pike Push-Up",
+      "greekName": "Κάμψεις ώμων pike",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Vertical Push",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:dumbbell_bench_press",
+      "name": "Dumbbell Bench Press",
+      "greekName": "Πιέσεις στήθους με αλτήρες σε πάγκο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:alternating_dumbbell_press",
+      "name": "Alternating Dumbbell Press",
+      "greekName": "Εναλλάξ πιέσεις αλτήρων",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:arnold_press",
+      "name": "Arnold Press",
+      "greekName": "Πιέσεις Arnold",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Vertical Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:single_arm_dumbbell_press",
+      "name": "Single-Arm Dumbbell Shoulder Press",
+      "greekName": "Μονόχειρες πιέσεις ώμων",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Vertical Push",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:dumbbell_lateral_raise",
+      "name": "Dumbbell Lateral Raise",
+      "greekName": "Πλάγιες άρσεις αλτήρων",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Raise",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_front_raise",
+      "name": "Dumbbell Front Raise",
+      "greekName": "Μπροστινές άρσεις αλτήρων",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Raise",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:rear_delt_fly",
+      "name": "Dumbbell Rear Delt Fly",
+      "greekName": "Ανοίγματα οπίσθιων ώμων",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Horizontal Abduction",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:chest_supported_row",
+      "name": "Chest-Supported Dumbbell Row",
+      "greekName": "Κωπηλατική με στήριξη στήθους",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_pullover",
+      "name": "Dumbbell Pullover",
+      "greekName": "Pullover με αλτήρα",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pullover",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_biceps_curl",
+      "name": "Dumbbell Biceps Curl",
+      "greekName": "Κάμψεις δικεφάλων με αλτήρες",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Δικέφαλοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Elbow Flexion",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:hammer_curl",
+      "name": "Hammer Curl",
+      "greekName": "Σφυροειδείς κάμψεις",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Δικέφαλοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Elbow Flexion",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:overhead_triceps_extension",
+      "name": "Overhead Triceps Extension",
+      "greekName": "Εκτάσεις τρικεφάλων πάνω από το κεφάλι",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Τρικέφαλοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Elbow Extension",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_triceps_kickback",
+      "name": "Dumbbell Triceps Kickback",
+      "greekName": "Εκτάσεις τρικεφάλων προς τα πίσω",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Τρικέφαλοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Elbow Extension",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_face_pull",
+      "name": "Resistance Band Face Pull",
+      "greekName": "Face pull με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_pull_apart",
+      "name": "Band Pull-Apart",
+      "greekName": "Ανοίγματα λάστιχου",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Horizontal Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_chest_press",
+      "name": "Resistance Band Chest Press",
+      "greekName": "Πιέσεις στήθους με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_shoulder_press",
+      "name": "Resistance Band Shoulder Press",
+      "greekName": "Πιέσεις ώμων με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Vertical Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_biceps_curl",
+      "name": "Resistance Band Biceps Curl",
+      "greekName": "Κάμψεις δικεφάλων με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Δικέφαλοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Elbow Flexion",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_triceps_pressdown",
+      "name": "Resistance Band Triceps Pressdown",
+      "greekName": "Πιέσεις τρικεφάλων με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Τρικέφαλοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Elbow Extension",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:bird_dog",
+      "name": "Bird Dog",
+      "greekName": "Bird Dog",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-rotation",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:bird_dog_row",
+      "name": "Bird Dog Row",
+      "greekName": "Bird Dog με κωπηλατική",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-rotation + Pull",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:hollow_hold",
+      "name": "Hollow Hold",
+      "greekName": "Κράτημα hollow",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "ISOMETRIC / STATIC"
+    },
+    {
+      "exerciseId": "local:hollow_rock",
+      "name": "Hollow Rock",
+      "greekName": "Hollow rock",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:crunch",
+      "name": "Crunch",
+      "greekName": "Ροκανίσματα",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Spinal Flexion",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:bicycle_crunch",
+      "name": "Bicycle Crunch",
+      "greekName": "Ποδήλατο κοιλιακών",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Rotation",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:reverse_crunch",
+      "name": "Reverse Crunch",
+      "greekName": "Ανάστροφα ροκανίσματα",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Spinal Flexion",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:lying_leg_raise",
+      "name": "Lying Leg Raise",
+      "greekName": "Άρσεις ποδιών ξαπλωτά",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hip Flexion",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:flutter_kicks",
+      "name": "Flutter Kicks",
+      "greekName": "Ψαλιδάκια",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hip Flexion",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:heel_taps",
+      "name": "Heel Taps",
+      "greekName": "Αγγίγματα φτέρνας",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lateral Flexion",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:russian_twist",
+      "name": "Russian Twist",
+      "greekName": "Ρωσικές στροφές",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Rotation",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:seated_knee_tuck",
+      "name": "Seated Knee Tuck",
+      "greekName": "Μάζεμα γονάτων καθιστός",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Flexion",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:plank_knee_to_elbow",
+      "name": "Plank Knee to Elbow",
+      "greekName": "Σανίδα με γόνατο στον αγκώνα",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:plank_jack",
+      "name": "Plank Jack",
+      "greekName": "Plank jack",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension + Conditioning",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:side_plank_reach_through",
+      "name": "Side Plank Reach-Through",
+      "greekName": "Πλάγια σανίδα με πέρασμα χεριού",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Rotation",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:side_plank_hip_dip",
+      "name": "Side Plank Hip Dip",
+      "greekName": "Πλάγια σανίδα με βύθιση λεκάνης",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-lateral flexion",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:high_plank_to_forearm",
+      "name": "High Plank to Forearm Plank",
+      "greekName": "Εναλλαγή ψηλής και χαμηλής σανίδας",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:cross_body_mountain_climber",
+      "name": "Cross-Body Mountain Climber",
+      "greekName": "Ορειβάτης χιαστί",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Rotation + Locomotion",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:slow_mountain_climber",
+      "name": "Slow Mountain Climber",
+      "greekName": "Αργός ορειβάτης",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:bear_plank",
+      "name": "Bear Plank",
+      "greekName": "Σανίδα bear",
+      "category": "Core",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "ISOMETRIC / STATIC"
+    },
+    {
+      "exerciseId": "local:dead_bug_band_pulldown",
+      "name": "Dead Bug with Band Pulldown",
+      "greekName": "Dead bug με έλξη λάστιχου",
+      "category": "Core",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:half_kneeling_pallof_press",
+      "name": "Half-Kneeling Pallof Press",
+      "greekName": "Pallof press γονατιστός",
+      "category": "Core",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-rotation",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:standing_band_rotation",
+      "name": "Standing Band Rotation",
+      "greekName": "Όρθιες στροφές με λάστιχο",
+      "category": "Core",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Rotation",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_russian_twist",
+      "name": "Dumbbell Russian Twist",
+      "greekName": "Ρωσικές στροφές με αλτήρα",
+      "category": "Core",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Rotation",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:thruster_single_dumbbell",
+      "name": "Single-Dumbbell Thruster",
+      "greekName": "Thruster με έναν αλτήρα",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat + Push",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:squat_to_press",
+      "name": "Dumbbell Squat to Press",
+      "greekName": "Squat to press με αλτήρες",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat + Push",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:devil_press",
+      "name": "Devil Press",
+      "greekName": "Devil press",
+      "category": "Power",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Burpee + Hinge + Press",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:man_maker",
+      "name": "Man Maker",
+      "greekName": "Man maker",
+      "category": "Power",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Complex",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:dumbbell_clean_squat_press",
+      "name": "Dumbbell Clean Squat Press",
+      "greekName": "Clean, squat και press με αλτήρες",
+      "category": "Power",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Complex",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:dumbbell_deadlift_high_pull",
+      "name": "Dumbbell Deadlift High Pull",
+      "greekName": "Deadlift high pull με αλτήρες",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge + Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:burpee_to_box_step",
+      "name": "Burpee to Step-Up",
+      "greekName": "Burpee με ανέβασμα σε step",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Burpee + Step-Up",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:burpee_broad_jump",
+      "name": "Burpee Broad Jump",
+      "greekName": "Burpee με άλμα μπροστά",
+      "category": "Power",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Burpee + Jump",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:squat_thrust",
+      "name": "Squat Thrust",
+      "greekName": "Squat thrust",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Full Body",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:walkout_push_up",
+      "name": "Walkout to Push-Up",
+      "greekName": "Walkout με κάμψη",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Locomotion + Push",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:bear_crawl_shoulder_tap",
+      "name": "Bear Crawl Shoulder Tap",
+      "greekName": "Bear crawl με άγγιγμα ώμων",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Locomotion + Anti-rotation",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:crab_walk",
+      "name": "Crab Walk",
+      "greekName": "Βάδισμα crab",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Locomotion",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:kettlebell_deadlift",
+      "name": "Kettlebell Deadlift",
+      "greekName": "Deadlift με kettlebell",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_rdl",
+      "name": "Kettlebell Romanian Deadlift",
+      "greekName": "Romanian Deadlift με kettlebell",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_sumo_deadlift",
+      "name": "Kettlebell Sumo Deadlift",
+      "greekName": "Sumo deadlift με kettlebell",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_press",
+      "name": "Kettlebell Strict Press",
+      "greekName": "Πιέσεις kettlebell",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Vertical Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:single_arm_kb_press",
+      "name": "Single-Arm Kettlebell Press",
+      "greekName": "Μονόχειρες πιέσεις kettlebell",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Vertical Push",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:kettlebell_high_pull",
+      "name": "Kettlebell High Pull",
+      "greekName": "High pull με kettlebell",
+      "category": "Power",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge + Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_halo",
+      "name": "Kettlebell Halo",
+      "greekName": "Halo με kettlebell",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Shoulder Mobility",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_windmill",
+      "name": "Kettlebell Windmill",
+      "greekName": "Windmill με kettlebell",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge + Rotation",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:kettlebell_rack_carry",
+      "name": "Kettlebell Rack Carry",
+      "greekName": "Μεταφορά kettlebell στη θέση rack",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Carry",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_overhead_carry",
+      "name": "Kettlebell Overhead Carry",
+      "greekName": "Μεταφορά kettlebell πάνω από το κεφάλι",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Carry + Stability",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_suitcase_carry",
+      "name": "Kettlebell Suitcase Carry",
+      "greekName": "Μονόπλευρη μεταφορά kettlebell",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Carry / Anti-lateral",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:kettlebell_front_rack_squat",
+      "name": "Kettlebell Front Rack Squat",
+      "greekName": "Καθίσματα με kettlebell σε rack",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:kettlebell_reverse_lunge",
+      "name": "Kettlebell Reverse Lunge",
+      "greekName": "Προβολές πίσω με kettlebell",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:kettlebell_clean_squat_press",
+      "name": "Kettlebell Clean Squat Press",
+      "greekName": "Clean, squat και press με kettlebell",
+      "category": "Power",
+      "level": null,
+      "equipment": "Kettlebell",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Complex",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:dumbbell_step_up",
+      "name": "Dumbbell Step-Up",
+      "greekName": "Ανέβασμα σε step με αλτήρες",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Step-Up",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:dumbbell_lateral_lunge",
+      "name": "Dumbbell Lateral Lunge",
+      "greekName": "Πλάγια προβολή με αλτήρες",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lateral Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:dumbbell_bulgarian_split_squat",
+      "name": "Dumbbell Bulgarian Split Squat",
+      "greekName": "Βουλγάρικο split squat με αλτήρες",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Split Squat",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:dumbbell_single_leg_rdl",
+      "name": "Dumbbell Single-Leg Romanian Deadlift",
+      "greekName": "Μονόποδο Romanian Deadlift με αλτήρες",
+      "category": "Stability",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Single-Leg Hinge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:dumbbell_hip_thrust",
+      "name": "Dumbbell Hip Thrust",
+      "greekName": "Hip thrust με αλτήρα",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:dumbbell_calf_raise",
+      "name": "Dumbbell Calf Raise",
+      "greekName": "Άρσεις γάμπας με αλτήρες",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Dumbbells",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Calf Raise",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_lateral_walk",
+      "name": "Band Lateral Walk",
+      "greekName": "Πλάγια βήματα με λάστιχο",
+      "category": "Activation",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lateral",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_monster_walk",
+      "name": "Band Monster Walk",
+      "greekName": "Monster walk με λάστιχο",
+      "category": "Activation",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lateral",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_glute_bridge",
+      "name": "Band Glute Bridge",
+      "greekName": "Γέφυρα γλουτών με λάστιχο",
+      "category": "Activation",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_clamshell",
+      "name": "Band Clamshell",
+      "greekName": "Clamshell με λάστιχο",
+      "category": "Activation",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hip Abduction",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_deadlift",
+      "name": "Resistance Band Deadlift",
+      "greekName": "Deadlift με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_good_morning",
+      "name": "Resistance Band Good Morning",
+      "greekName": "Good morning με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_reverse_lunge",
+      "name": "Resistance Band Reverse Lunge",
+      "greekName": "Προβολές πίσω με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Lunge",
+      "movementType": "UNILATERAL"
+    },
+    {
+      "exerciseId": "local:band_lateral_raise",
+      "name": "Resistance Band Lateral Raise",
+      "greekName": "Πλάγιες άρσεις με λάστιχο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Raise",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:band_external_rotation",
+      "name": "Band External Rotation",
+      "greekName": "Εξωτερικές στροφές ώμου με λάστιχο",
+      "category": "Activation",
+      "level": null,
+      "equipment": "Resistance Bands",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Shoulder Rotation",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:trx_y_raise",
+      "name": "TRX Y Raise",
+      "greekName": "TRX Y raise",
+      "category": "Strength",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Raise",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:trx_face_pull",
+      "name": "TRX Face Pull",
+      "greekName": "TRX face pull",
+      "category": "Strength",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:trx_hamstring_curl",
+      "name": "TRX Hamstring Curl",
+      "greekName": "Κάμψεις μηριαίων με TRX",
+      "category": "Strength",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Knee Flexion",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:trx_glute_bridge",
+      "name": "TRX Glute Bridge",
+      "greekName": "Γέφυρα γλουτών με TRX",
+      "category": "Strength",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:trx_plank",
+      "name": "TRX Plank",
+      "greekName": "Σανίδα TRX",
+      "category": "Core",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:trx_knee_tuck",
+      "name": "TRX Knee Tuck",
+      "greekName": "Μάζεμα γονάτων TRX",
+      "category": "Core",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Flexion",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:trx_pike",
+      "name": "TRX Pike",
+      "greekName": "TRX pike",
+      "category": "Core",
+      "level": null,
+      "equipment": "TRX",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-extension + Pike",
+      "movementType": "MULTI-PHASE"
+    },
+    {
+      "exerciseId": "local:cable_pallof_press",
+      "name": "Cable Pallof Press",
+      "greekName": "Pallof press στην τροχαλία",
+      "category": "Core",
+      "level": null,
+      "equipment": "Cables",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Anti-rotation",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:cable_chest_press",
+      "name": "Cable Chest Press",
+      "greekName": "Πιέσεις στήθους στην τροχαλία",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Cables",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:cable_face_pull",
+      "name": "Cable Face Pull",
+      "greekName": "Face pull στην τροχαλία",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Cables",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Pull",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:cable_rotation",
+      "name": "Cable Rotation",
+      "greekName": "Στροφές κορμού στην τροχαλία",
+      "category": "Core",
+      "level": null,
+      "equipment": "Cables",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Rotation",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:battle_rope_alternating_waves",
+      "name": "Battle Rope Alternating Waves",
+      "greekName": "Εναλλάξ κύματα με battle ropes",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Battle Ropes",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Conditioning",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:battle_rope_side_waves",
+      "name": "Battle Rope Side-to-Side Waves",
+      "greekName": "Πλάγια κύματα με battle ropes",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Battle Ropes",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Conditioning",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:battle_rope_power_slam",
+      "name": "Battle Rope Power Slam",
+      "greekName": "Δυνατά slams με battle ropes",
+      "category": "Conditioning",
+      "level": null,
+      "equipment": "Battle Ropes",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Full Body",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:box_squat",
+      "name": "Box Squat",
+      "greekName": "Καθίσματα σε box",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:bench_dip",
+      "name": "Bench Dip",
+      "greekName": "Βυθίσεις τρικεφάλων σε πάγκο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Τρικέφαλοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:bench_push_up",
+      "name": "Bench Push-Up",
+      "greekName": "Κάμψεις σε πάγκο",
+      "category": "Strength",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Στήθος"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Push",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    },
+    {
+      "exerciseId": "local:hip_flexor_stretch",
+      "name": "Hip Flexor Stretch",
+      "greekName": "Διάταση καμπτήρων ισχίου",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Stretching",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:hamstring_sweep",
+      "name": "Hamstring Sweep",
+      "greekName": "Δυναμική διάταση οπίσθιων μηριαίων",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Dynamic Mobility",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:worlds_greatest_stretch",
+      "name": "World’s Greatest Stretch",
+      "greekName": "Δυναμική διάταση προβολής με στροφή",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Full Body"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Dynamic Mobility",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:thoracic_rotation",
+      "name": "Quadruped Thoracic Rotation",
+      "greekName": "Θωρακική στροφή στα τέσσερα",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Mobility",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:cat_cow",
+      "name": "Cat-Cow",
+      "greekName": "Cat-cow",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Spinal Mobility",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:ankle_rocker",
+      "name": "Ankle Rocker",
+      "greekName": "Κινητοποίηση ποδοκνημικής",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Ankle Mobility",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:shoulder_circles",
+      "name": "Shoulder Circles",
+      "greekName": "Κύκλοι ώμων",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Shoulder Mobility",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:arm_swings",
+      "name": "Arm Swings",
+      "greekName": "Αιωρήσεις χεριών",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Ώμοι"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Dynamic Mobility",
+      "movementType": "ALTERNATING"
+    },
+    {
+      "exerciseId": "local:glute_activation_bridge",
+      "name": "Glute Bridge Activation",
+      "greekName": "Ενεργοποίηση γλουτών με γέφυρα",
+      "category": "Activation",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Γλουτοί"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Activation",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:bodyweight_good_morning",
+      "name": "Bodyweight Good Morning",
+      "greekName": "Good morning χωρίς βάρος",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Hinge",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:deep_squat_pry",
+      "name": "Deep Squat Pry",
+      "greekName": "Βαθύ κάθισμα με κινητοποίηση",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Squat Mobility",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:calf_stretch",
+      "name": "Standing Calf Stretch",
+      "greekName": "Διάταση γάμπας όρθιος",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Πόδια"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Stretching",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:childs_pose",
+      "name": "Child’s Pose",
+      "greekName": "Θέση παιδιού",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bodyweight",
+      "primaryMuscles": [
+        "Κορμός"
+      ],
+      "secondaryMuscles": [
+        "Γλουτοί",
+        "Σταθεροποιητές ώμων"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Stretching",
+      "movementType": "DYNAMIC"
+    },
+    {
+      "exerciseId": "local:kneeling_lat_stretch",
+      "name": "Kneeling Lat Stretch",
+      "greekName": "Διάταση πλάτης γονατιστός",
+      "category": "Mobility",
+      "level": null,
+      "equipment": "Bench/Step",
+      "primaryMuscles": [
+        "Πλάτη"
+      ],
+      "secondaryMuscles": [
+        "Κορμός",
+        "Σταθεροποιητές"
+      ],
+      "existingMedia": "runtime GIF/3D merge or MotionPreview fallback",
+      "movement": "Stretching",
+      "movementType": "EQUIPMENT-DEPENDENT"
+    }
+  ]
+}
