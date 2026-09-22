@@ -3,7 +3,8 @@ import json
 import os
 from pathlib import Path
 from src.visuals.generator import AthleticoProductionGenerator
-from src.visuals.runware_adapter import RunwareInferenceAdapter, OPENPOSE_PREPROCESSOR\nfrom src.visuals.pose_control import pose_data_uri
+from src.visuals.runware_adapter import RunwareInferenceAdapter, OPENPOSE_PREPROCESSOR
+from src.visuals.pose_control import pose_data_uri
 
 PHASES=("start","execution","return")
 
