@@ -38,3 +38,21 @@ def test_default_output_mapping_uses_stable_id(tmp_path):
     p.write_text(json.dumps({"exercises":{"ath:test":{"frames":{"start":f,"execution":f,"return":f}}}}),encoding="utf-8")
     tasks=manifest_tasks(p)
     assert [t["target_filename"] for t in tasks]==["ath:test/start.webp","ath:test/execution.webp","ath:test/return.webp"]
+
+
+def test_local_backend_does_not_require_character_reference_in_manifest(tmp_path):
+    p=tmp_path/"manifest.json"
+    f={"prompt":"x","pose_template":"standing_front"}
+    p.write_text(json.dumps({"exercises":{"ath:test":{"frames":{"start":f,"execution":f,"return":f}}}}),encoding="utf-8")
+    tasks=manifest_tasks(p)
+    errors=validate_tasks(tasks,require_character=False)
+    assert not [e for e in errors if "character reference/LoRA" in e]
+    assert not [e for e in errors if "pose/control" in e]
+
+
+def test_pilot_manifest_is_exactly_10_exercises_30_frames():
+    tasks=manifest_tasks("src/visuals/exercise-visual-manifest.json")
+    ids=list(dict.fromkeys(t["exercise_id"] for t in tasks))
+    assert len(ids)==10
+    assert len(tasks)==30
+    assert not [e for e in validate_tasks(tasks,require_character=False) if "pose/control" in e]
