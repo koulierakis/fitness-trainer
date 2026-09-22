@@ -3,7 +3,7 @@ import json
 import os
 from pathlib import Path
 from src.visuals.generator import AthleticoProductionGenerator
-from src.visuals.runware_adapter import RunwareInferenceAdapter, OPENPOSE_PREPROCESSOR
+from src.visuals.runware_adapter import RunwareInferenceAdapter, OPENPOSE_PREPROCESSOR\nfrom src.visuals.pose_control import pose_data_uri
 
 PHASES=("start","execution","return")
 
@@ -36,7 +36,7 @@ def validate_tasks(tasks):
         f=t["frame"];tag=t["exercise_id"]+":"+t["phase"]
         if not t["target_filename"].lower().endswith(".webp"):errors.append(tag+": invalid output path")
         if not t["prompt"].strip():errors.append(tag+": missing prompt")
-        if not (f.get("pose_reference") or f.get("control_reference")):errors.append(tag+": missing pose/control reference")
+        if not (f.get("pose_reference") or f.get("control_reference") or f.get("pose_template")):errors.append(tag+": missing pose/control reference")
         if not (f.get("character_reference") or f.get("character_lora") or t["exercise"].get("character_reference") or t["exercise"].get("character_lora")):
             errors.append(tag+": missing character reference/LoRA")
         refs=[str(f.get(k) or "") for k in ("pose_reference","control_reference","character_reference")]
