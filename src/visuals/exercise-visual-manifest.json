@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "system": "athletico-keyframe-visuals",
+  "sequence": ["start","execution","return","execution","start"],
+  "visualIdentity": {
+    "character": "same adult athletic brunette woman, realistic anatomy, black premium athletic clothing",
+    "environment": "Athletico Wellness Center; charcoal black, cool gray, muted blue, subtle natural wood",
+    "lighting": "controlled cinematic studio lighting",
+    "prohibited": ["motivational text","random logos","watermarks","unnecessary equipment"]
+  },
+  "exercises": {
+    "local:squat": {
+      "name":"Squat","greekName":"Καθίσματα","camera":"3/4 front-side, full body, feet visible",
+      "frames":{
+        "start":{"asset":"/exercise-visuals/local-squat/start.webp","pose":"Standing upright, feet about shoulder width, neutral spine, weight balanced through tripod feet."},
+        "execution":{"asset":"/exercise-visuals/local-squat/execution.webp","pose":"Hips back and down, knees tracking with toes, heels grounded, neutral spine and controlled torso."},
+        "return":{"asset":"/exercise-visuals/local-squat/return.webp","pose":"Controlled ascent to upright stance with knees and hips extending together."}
+      }
+    },
+    "local:push_up": {
+      "name":"Push-Up","greekName":"Κάμψεις","camera":"side view, full body",
+      "frames":{
+        "start":{"asset":"/exercise-visuals/local-push-up/start.webp","pose":"High plank, hands under/slightly wider than shoulders, head-pelvis-heels aligned."},
+        "execution":{"asset":"/exercise-visuals/local-push-up/execution.webp","pose":"Chest lowered under control, elbows in a natural angle, rigid trunk and neutral neck."},
+        "return":{"asset":"/exercise-visuals/local-push-up/return.webp","pose":"Press floor away and return to high plank without hip sag or pike."}
+      }
+    },
+    "local:lunge": {
+      "name":"Forward Lunge","greekName":"Προβολές μπροστά","camera":"3/4 side view showing both feet and knee alignment",
+      "frames":{
+        "start":{"asset":"/exercise-visuals/local-lunge/start.webp","pose":"Tall standing posture, pelvis neutral, feet hip width."},
+        "execution":{"asset":"/exercise-visuals/local-lunge/execution.webp","pose":"Forward split stance lowered vertically; front knee tracks over foot, rear knee approaches floor, torso controlled."},
+        "return":{"asset":"/exercise-visuals/local-lunge/return.webp","pose":"Push through front foot and return under control to balanced standing."}
+      }
+    },
+    "local:plank": {
+      "name":"Plank","greekName":"Σανίδα","camera":"side view, full body",
+      "frames":{
+        "start":{"asset":"/exercise-visuals/local-plank/start.webp","pose":"Forearms supported, elbows under shoulders, toes grounded, neutral head-to-heel line."},
+        "execution":{"asset":"/exercise-visuals/local-plank/execution.webp","pose":"Maintain anti-extension brace: ribs controlled, pelvis neutral, glutes active, no lumbar sag."},
+        "return":{"asset":"/exercise-visuals/local-plank/return.webp","pose":"Maintain the same stable plank position with controlled breathing; isometric exercise has no artificial limb motion."}
+      }
+    },
+    "reformer:r1:footwork": {
+      "name":"Reformer Footwork / Leg Press","greekName":"Πιέσεις ποδιών Reformer","source":"existing r1 Footwork block","camera":"strict side profile showing entire Reformer and carriage travel",
+      "equipmentQC":["moving carriage","footbar","shoulder rests","headrest","springs/rails","feet-to-footbar contact"],
+      "frames":{
+        "start":{"asset":"/exercise-visuals/reformer-r1-footwork/start.webp","pose":"Supine on carriage, head supported, shoulders at rests, neutral pelvis, feet symmetrical on footbar, knees flexed."},
+        "execution":{"asset":"/exercise-visuals/reformer-r1-footwork/execution.webp","pose":"Press carriage away by extending both legs together while pelvis and torso remain stable; knees not aggressively locked."},
+        "return":{"asset":"/exercise-visuals/reformer-r1-footwork/return.webp","pose":"Bend knees under spring control as carriage returns toward footbar while maintaining alignment and foot contact."}
+      }
+    }
+  }
+}
