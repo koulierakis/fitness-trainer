@@ -92,14 +92,14 @@ function App(){
 
  const programSource=mode==='functional'?functionalPrograms:reformerPrograms;
  const programCategories=mode==='functional'?functionalProgramCategories:reformerProgramCategories;
- const visiblePrograms=programSource.filter(p=>p.level===pLevel&&(p.type===pType||p.focus===pType));
+ const visiblePrograms=programSource.filter(p=>(pLevel==='Όλα'||p.level===pLevel)&&(pType==='Όλα'||p.type===pType||p.focus===pType));
 
  const Filter=({label,value,set,options})=><div className="filterBlock"><label>{label}</label><div className="chips">{['Όλα',...options].map(v=><button key={v} className={value===v?'on':''} onClick={()=>set(v)}>{v}</button>)}</div></div>;
 
  if(lesson){
   return lesson.trainingType==='reformer'
-   ?<ReformerProgramPlan program={lesson} exercises={reformerExercises} onClose={()=>setLesson(null)} onExercise={setDetail}/>
-   :<LessonPlan program={lesson} exercises={functionalLibrary} onClose={()=>setLesson(null)} onExercise={setDetail}/>;
+   ?<ReformerProgramPlan program={lesson} exercises={reformerExercises} onClose={()=>setLesson(null)} onExercise={exercise=>{setDetail(exercise);setLesson(null)}}/>
+   :<LessonPlan program={lesson} exercises={functionalLibrary} onClose={()=>setLesson(null)} onExercise={exercise=>{setDetail(exercise);setLesson(null)}}/>;
  }
 
  if(detail)return <div className="app">
