@@ -1,4 +1,4 @@
-import {exercises as baseExercises} from '../data';
+import {exercises as baseExercises} from '../data.js';
 
 export const FUNCTIONAL_BODY_AREAS=['Πόδια','Χέρια','Πλάτη','Στήθος','Κορμός','Full Body','Stretching'];
 export const FUNCTIONAL_MUSCLES=['Δικέφαλοι','Τρικέφαλοι','Ώμοι','Στήθος','Πλάτη','Κοιλιακοί','Ραχιαίοι','Γλουτοί','Τετρακέφαλοι','Δικέφαλοι μηριαίοι','Γάμπες','Απαγωγοί','Προσαγωγοί'];
