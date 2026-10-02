@@ -2,7 +2,7 @@ name: Functional QA
 # shared-catalog-v1
 on:
   push:
-    branches: [main, work/functional-gif-library, work/functional-full-1500-gif-catalog, work/functional-200-curated, work/reformer-functional-library-v1]
+    branches: [main, work/functional-gif-library, work/functional-full-1500-gif-catalog, work/functional-200-curated, work/reformer-functional-library-v1, work/reformer-browser-qa-final]
   pull_request:
     branches: [main]
 jobs:
