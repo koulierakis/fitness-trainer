@@ -17,6 +17,12 @@ jobs:
       - run: npm run build
       - name: Catalog data QA
         run: npm run validate:catalog
+      - name: Install browser smoke dependency
+        run: npm install --no-save playwright@1.55.0
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Real browser smoke QA
+        run: node scripts/browser-smoke.mjs
       - name: Verify 3D assets
         run: npm run verify:3d
       - name: Curated Functional media QA
