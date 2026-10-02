@@ -42,11 +42,10 @@ export default function ExerciseAnimation({exercise,compact=false}){
   const[keyframesFailed,setKeyframesFailed]=useState(false);
   useEffect(()=>setKeyframesFailed(false),[exercise?.id]);
   useEffect(()=>setDegraded(null),[exercise?.id,media3d?.modelUrl,exercise?.media?.imageUrl]);
+  const fallback=useCallback(()=><NoVisualPreview exercise={exercise} compact={compact}/>,[exercise,compact]);
 
   if(hasKeyframeVisual(exercise?.id)&&!keyframesFailed)return <KeyframeExercisePreview exercise={exercise} compact={compact} onUnavailable={()=>setKeyframesFailed(true)}/>;
   if(exercise?.id==='local:squat')return <RepDBPoseDemo exercise={exercise} compact={compact}/>;
-
-  const fallback=useCallback(()=><NoVisualPreview exercise={exercise} compact={compact}/>,[exercise,compact]);
 
   if(exercise?.media?.type==='animated-gif'&&exercise.media.enabled&&exercise.media.imageUrl&&!degraded){
     return <AnimatedGifPreview exercise={exercise} compact={compact} onError={()=>setDegraded('gif-error')}/>;
