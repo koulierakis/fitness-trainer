@@ -1,7 +1,7 @@
 name: Functional QA
 on:
   push:
-    branches: [main, work/functional-gif-library, work/functional-full-1500-gif-catalog, work/functional-200-curated]
+    branches: [main, work/functional-gif-library, work/functional-full-1500-gif-catalog, work/functional-200-curated, work/reformer-functional-library-v1]
   pull_request:
     branches: [main]
 jobs:
