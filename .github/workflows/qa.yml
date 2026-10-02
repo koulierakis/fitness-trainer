@@ -1,7 +1,8 @@
 name: Functional QA
+# shared-catalog-v1
 on:
   push:
-    branches: [main, work/functional-gif-library, work/functional-full-1500-gif-catalog, work/functional-200-curated]
+    branches: [main, work/functional-gif-library, work/functional-full-1500-gif-catalog, work/functional-200-curated, work/reformer-functional-library-v1]
   pull_request:
     branches: [main]
 jobs:
@@ -14,6 +15,8 @@ jobs:
           node-version: 24
       - run: npm install
       - run: npm run build
+      - name: Catalog data QA
+        run: npm run validate:catalog
       - name: Verify 3D assets
         run: npm run verify:3d
       - name: Curated Functional media QA
