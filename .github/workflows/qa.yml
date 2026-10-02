@@ -14,6 +14,8 @@ jobs:
           node-version: 24
       - run: npm install
       - run: npm run build
+      - name: Catalog data QA
+        run: npm run validate:catalog
       - name: Verify 3D assets
         run: npm run verify:3d
       - name: Curated Functional media QA
