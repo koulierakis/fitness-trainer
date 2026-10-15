@@ -26,6 +26,8 @@ def manifest_tasks(path,exercise_ids=None):
         for phase in PHASES:
             frame=dict(spec.get("frames",{}).get(phase,{}))
             if frame.get("pose_template") and not frame.get("control_reference"):
+                # Deterministic local skeleton map. Keep pose_reference separate: it is reserved for
+                # photographic/source references that must go through OpenPose preprocessing.
                 frame["control_reference"]=pose_data_uri(frame["pose_template"],int(frame.get("width") or spec.get("width") or 1344),int(frame.get("height") or spec.get("height") or 768))
             prompt=frame.get("prompt") or frame.get("generation_prompt") or spec.get("prompt") or ""
             tasks.append({"exercise_id":exercise_id,"phase":phase,"target_filename":_target(frame.get("asset"),exercise_id,phase),
@@ -45,6 +47,8 @@ def validate_tasks(tasks,require_character=True):
             errors.append(tag+": missing character reference/LoRA")
         refs=[str(f.get(k) or "") for k in ("pose_reference","control_reference","character_reference")]
         if any("repdb" in x.lower() for x in refs):errors.append(tag+": RepDB conditioning is forbidden")
+        if f.get("pose_reference") and str(f.get("pose_reference","")).startswith("data:"):
+            errors.append(tag+": pose_reference must be a source image/URL, not an embedded control map")
     return errors
 
 def main():
