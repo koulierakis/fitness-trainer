@@ -4,17 +4,17 @@ import {Home,Dumbbell,Mic,Play,Search,Settings2,X,ChevronRight} from 'lucide-rea
 import './styles.css';
 import {programs as basePrograms,PROGRAM_CATEGORIES} from './programs60';
 import {loadDatasetExercises} from './dataset';
+import {loadOpenGym3DExercises} from './opengym3d';
 import ExerciseAnimation from './components/ExerciseAnimation';
 import LessonPlan from './components/LessonPlan';
 import ReformerProgramPlan from './components/ReformerProgramPlan';
 import {functionalExercises,FUNCTIONAL_BODY_AREAS,FUNCTIONAL_MUSCLES,FUNCTIONAL_LEVELS} from './catalog/functionalCatalog';
-import {expandedFunctionalPrograms,EXPANDED_PROGRAM_CATEGORIES} from './catalog/functionalPrograms';
 import {reformerExercises,REFORMER_CATEGORIES,REFORMER_LEVELS} from './catalog/reformerCatalog';
 import {reformerPrograms,reformerProgramCategories} from './catalog/reformerPrograms';
 
 const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-const functionalPrograms=[...basePrograms,...expandedFunctionalPrograms];
-const functionalProgramCategories=[...new Set([...PROGRAM_CATEGORIES,...EXPANDED_PROGRAM_CATEGORIES])];
+const functionalPrograms=basePrograms; // The ready-to-teach weekly set contains exactly eight sessions.
+const functionalProgramCategories=PROGRAM_CATEGORIES;
 
 const remoteArea=x=>x.bodyArea||x.group||'Λοιπά';
 const remoteMuscles=x=>{
@@ -42,6 +42,7 @@ function App(){
  const[mode,setMode]=useState('functional');
  const[tab,setTab]=useState('home');
  const[remote,setRemote]=useState([]);
+ const[verified3d,setVerified3d]=useState([]);
  const[status,setStatus]=useState('loading');
  const[detail,setDetail]=useState(null);
  const[lesson,setLesson]=useState(null);
@@ -63,18 +64,28 @@ function App(){
  },[]);
 
  useEffect(()=>{
+  const c=new AbortController();
+  loadOpenGym3DExercises({signal:c.signal})
+   .then(rows=>setVerified3d(rows.filter(x=>x.source==='opengym3d'&&x.media3d?.type==='glb')))
+   .catch(e=>{if(e?.name!=='AbortError')console.warn('3D manifest unavailable; keeping existing visual fallbacks',e)});
+  return()=>c.abort();
+ },[]);
+
+ useEffect(()=>{
   setQ('');setEquipment('Όλα');setBodyArea('Όλα');setMuscle('Όλα');setGoal('Όλα');setLevel('Όλα');
   setPLevel('Beginner');setPType('Full Body');setDetail(null);setLesson(null);
  },[mode]);
 
  const functionalLibrary=useMemo(()=>{
+  const mediaById=new Map(verified3d.filter(x=>x.media3d?.type==='glb').map(x=>[x.openGymId,x.media3d]));
+  const curated=functionalExercises.map(x=>mediaById.has(x.openGymId)?{...x,media3d:mediaById.get(x.openGymId)}:x);
   const seen=new Set();
-  return[...functionalExercises,...remote].filter(x=>{
+  return[...curated,...remote].filter(x=>{
    const key=norm(x.name||x.gr);
    if(seen.has(key))return false;
    seen.add(key);return true;
   });
- },[remote]);
+ },[remote,verified3d]);
 
  const exercises=mode==='functional'?functionalLibrary:reformerExercises;
 
@@ -87,7 +98,7 @@ function App(){
    &&(bodyArea==='Όλα'||x.bodyArea===bodyArea||x.group===bodyArea)
    &&(muscle==='Όλα'||muscles.includes(muscle))
    &&(goal==='Όλα'||x.goal===goal)
-   &&(level==='Όλα'||x.level===level);
+   &&(mode==='functional'||level==='Όλα'||x.level===level);
  }),[exercises,q,equipment,bodyArea,muscle,goal,level]);
 
  const programSource=mode==='functional'?functionalPrograms:reformerPrograms;
@@ -103,11 +114,11 @@ function App(){
  }
 
  if(detail)return <div className="app">
-  <header className="topbar"><button className="iconBtn" onClick={()=>setDetail(null)}><X/></button><div className="centerTitle"><b>{detail.trainingType==='reformer'?'Pilates Reformer':'Functional'}</b><small>{detail.level}</small></div><span/></header>
+  <header className="topbar"><button className="iconBtn" onClick={()=>setDetail(null)}><X/></button><div className="centerTitle"><b>{detail.trainingType==='reformer'?'Pilates Reformer':'Functional'}</b><small>{detail.trainingType==='reformer'?detail.level:'Functional'}</small></div><span/></header>
   <main className="main">
    <ExerciseAnimation exercise={detail}/>
    <section className="detail">
-    <p className="kicker">{detail.level} · {detail.equipment} · {detail.bodyArea||detail.group}</p>
+    <p className="kicker">{detail.trainingType==='reformer'?`${detail.level} · `:''}{detail.equipment} · {detail.bodyArea||detail.group}</p>
     <h1>{detail.gr||detail.name}</h1><small>{detail.name}</small>
     {detail.description&&<><h3>Περιγραφή</h3><p>{detail.description}</p></>}
     <h3>Εκτέλεση</h3><p>{detail.instructions}</p>
@@ -144,7 +155,7 @@ function App(){
     <div className="pageHead"><div><span>{mode==='functional'?'FUNCTIONAL LIBRARY':'PILATES REFORMER LIBRARY'}</span><h1>Ασκησιολόγιο</h1></div></div>
     <div className="searchBox"><Search/><input value={q} onChange={e=>setQ(e.target.value)} placeholder="Αναζήτηση άσκησης..."/></div>
     <div className="filterPanel">
-     <Filter label="Επίπεδο" value={level} set={setLevel} options={mode==='functional'?FUNCTIONAL_LEVELS:REFORMER_LEVELS}/>
+     {mode==='reformer'&&<Filter label="Επίπεδο" value={level} set={setLevel} options={REFORMER_LEVELS}/>}
      <Filter label="Κατηγορία σώματος" value={bodyArea} set={setBodyArea} options={mode==='functional'?FUNCTIONAL_BODY_AREAS:REFORMER_CATEGORIES}/>
      {mode==='functional'&&<Filter label="Αναλυτική μυϊκή ομάδα" value={muscle} set={setMuscle} options={FUNCTIONAL_MUSCLES}/>}
      <Filter label="Εξοπλισμός" value={equipment} set={setEquipment} options={values('equipment')}/>
@@ -153,7 +164,7 @@ function App(){
     <p className="resultMeta">{filtered.length} ασκήσεις {mode==='functional'&&status==='error'?'· εξωτερική βάση προσωρινά μη διαθέσιμη':''}</p>
     <div className="exerciseGrid">{filtered.map(ex=><article className="exerciseCard" key={ex.id} onClick={()=>setDetail(ex)}>
      <div className="exerciseVisual"><ExerciseAnimation exercise={ex} compact/></div>
-     <div className="exerciseContent"><div className="miniRow"><span>{ex.equipment}</span></div><h3>{ex.gr||ex.name}</h3><p>{ex.name}</p><div className="metaPills"><span>{ex.level}</span><span>{ex.bodyArea||ex.group}</span></div></div>
+     <div className="exerciseContent"><div className="miniRow"><span>{ex.equipment}</span></div><h3>{ex.gr||ex.name}</h3><p>{ex.name}</p><div className="metaPills">{mode==='reformer'&&<span>{ex.level}</span>}<span>{ex.bodyArea||ex.group}</span></div></div>
     </article>)}</div>
    </>}
 
