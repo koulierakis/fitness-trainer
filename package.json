@@ -16,7 +16,8 @@
     "validate:visual-manifest:strict": "python scripts/validate_visual_manifest.py --strict",
     "qc:visual-assets": "python scripts/qc_visual_assets.py --allow-missing",
     "qc:visual-assets:strict": "python scripts/qc_visual_assets.py",
-    "validate:catalog": "node scripts/validate-catalog.mjs"
+    "validate:catalog": "node scripts/validate-catalog.mjs",
+    "validate:weekly": "node scripts/validate-weekly-functional.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
