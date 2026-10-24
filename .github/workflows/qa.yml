@@ -28,6 +28,8 @@ jobs:
       - name: Curated Functional media QA
         run: |
           node --input-type=module -e "Promise.all([import('./src/data.js'),import('./src/curatedMediaMap.js')]).then(([d,m])=>{if(d.exercises.length!==201)throw new Error('Expected 201 curated exercises');const ids=new Set(d.exercises.map(x=>x.id));for(const id of Object.keys(m.CURATED_GIF_NAME_MAP))if(!ids.has(id))throw new Error('Unknown curated media id: '+id);console.log('Curated exercises:',d.exercises.length,'reviewed GIF aliases:',Object.keys(m.CURATED_GIF_NAME_MAP).length)})"
+      - name: Weekly Functional timeline and exercise-reference QA
+        run: npm run validate:weekly
       - name: Functional program QA
         run: |
           node --input-type=module -e "import('./src/programs60.js').then(m=>{if(!m.validatePrograms())process.exit(1);console.log('Programs:',m.programs.length,'all 3600s')})"
