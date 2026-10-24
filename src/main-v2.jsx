@@ -36,7 +36,7 @@ const remoteMuscles=x=>{
  if(/adductor/.test(source))add('Προσαγωγοί');
  return out;
 };
-const normalizeRemote=x=>({...x,trainingType:'functional',bodyArea:remoteArea(x),detailedMuscles:remoteMuscles(x),visuals:x.visuals||{start:null,execution:null,return:null,gif:x.media?.imageUrl||null,video:null,model3d:null}});
+const normalizeRemote=x=>{const {level:unusedLevel,...base}=x;return {...base,trainingType:'functional',bodyArea:remoteArea(x),detailedMuscles:remoteMuscles(x),visuals:x.visuals||{start:null,execution:null,return:null,gif:x.media?.imageUrl||null,video:null,model3d:null}}};
 
 function App(){
  const[mode,setMode]=useState('functional');
