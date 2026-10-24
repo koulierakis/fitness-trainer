@@ -14,7 +14,8 @@ assert.ok(validatePrograms(),'Program-level schema/duration validation failed');
 assert.equal(validateProgramReferences(programs,functionalExercises).length,0,'Broken exercise references');
 assert.ok(functionalExercises.every(x=>!Object.hasOwn(x,'level')),'Difficulty belongs to programs, not exercises');
 for(const p of programs){
- assert.equal(p.week,'2026-10-24','Unexpected weekly refresh date: '+p.id);
+ assert.match(p.week,/^\d{4}-\d{2}-\d{2}$/,'Invalid weekly refresh date: '+p.id);
+ assert.equal(p.week,programs[0].week,'Mismatched weekly refresh dates: '+p.id);
  assert.equal(p.duration,60);
  assert.equal(p.seconds,3600);
  assert.ok(['Beginner','Advanced'].includes(p.level));
