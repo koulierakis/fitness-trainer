@@ -100,7 +100,7 @@ const W={
       "trx_row",
       "dumbbell_step_up",
       "band_pallof_press",
-      "dumbbell_shoulder_press"
+      "push_up"
     ],
     "finish": [
       "farmer_carry",
@@ -307,7 +307,7 @@ const W={
       "push_up"
     ],
     "main": [
-      "devil_press",
+      "kettlebell_swing",
       "kettlebell_clean_squat_press",
       "battle_rope_alternating_waves",
       "skater_jump",
@@ -355,7 +355,7 @@ const W={
       "kettlebell_front_rack_squat",
       "dumbbell_snatch",
       "trx_row",
-      "deadlift"
+      "bear_crawl"
     ],
     "finish": [
       "battle_rope_power_slam",
