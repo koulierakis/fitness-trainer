@@ -43,21 +43,20 @@ export default function ExerciseAnimation({exercise,compact=false}){
   useEffect(()=>setKeyframesFailed(false),[exercise?.id]);
   useEffect(()=>setDegraded(null),[exercise?.id,media3d?.modelUrl,exercise?.media?.imageUrl]);
   const fallback=useCallback(()=>{
-    if(media3d?.type==='glb'&&!degraded){
-    return <Exercise3DViewer key={`${exercise?.id}|${media3d.modelUrl}`} modelUrl={media3d.modelUrl} animationName={media3d.animationName} compact={compact} cameraPosition={media3d.camera?.position||[2.8,1.7,4.2]} scale={media3d.model?.scale||1} modelPosition={media3d.model?.position||[0,0,0]} modelRotation={media3d.model?.rotation||[0,0,0]} fallback={fallback} onNoAnimation={()=>setDegraded('no-clips')}/>;
-  }
-  if(hasKeyframeVisual(exercise?.id)&&!keyframesFailed)return <KeyframeExercisePreview exercise={exercise} compact={compact} onUnavailable={()=>setKeyframesFailed(true)}/>;
+    if(hasKeyframeVisual(exercise?.id)&&!keyframesFailed)return <KeyframeExercisePreview exercise={exercise} compact={compact} onUnavailable={()=>setKeyframesFailed(true)}/>;
     if(exercise?.id==='local:squat')return <RepDBPoseDemo exercise={exercise} compact={compact}/>;
     if(exercise?.media?.type==='animated-gif'&&exercise.media.enabled&&exercise.media.imageUrl)return <AnimatedGifPreview exercise={exercise} compact={compact} onError={()=>setDegraded('gif-error')}/>;
     return <NoVisualPreview exercise={exercise} compact={compact}/>;
   },[exercise,compact,keyframesFailed]);
 
+  // Prefer the QA-manifest skeletal animation; degrade to existing verified media on failure.
+  if(media3d?.type==='glb'&&!degraded){
+    return <Exercise3DViewer key={`${exercise?.id}|${media3d.modelUrl}`} modelUrl={media3d.modelUrl} animationName={media3d.animationName} compact={compact} cameraPosition={media3d.camera?.position||[2.8,1.7,4.2]} scale={media3d.model?.scale||1} modelPosition={media3d.model?.position||[0,0,0]} modelRotation={media3d.model?.rotation||[0,0,0]} fallback={fallback} onNoAnimation={()=>setDegraded('no-clips')}/>;
+  }
   if(hasKeyframeVisual(exercise?.id)&&!keyframesFailed)return <KeyframeExercisePreview exercise={exercise} compact={compact} onUnavailable={()=>setKeyframesFailed(true)}/>;
   if(exercise?.id==='local:squat')return <RepDBPoseDemo exercise={exercise} compact={compact}/>;
-
   if(exercise?.media?.type==='animated-gif'&&exercise.media.enabled&&exercise.media.imageUrl&&!degraded){
     return <AnimatedGifPreview exercise={exercise} compact={compact} onError={()=>setDegraded('gif-error')}/>;
   }
-
   return <NoVisualPreview exercise={exercise} compact={compact}/>;
 }
