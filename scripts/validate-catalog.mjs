@@ -7,7 +7,7 @@ const all=[...functionalExercises,...reformerExercises];
 const ids=all.map(x=>x.id);
 if(new Set(ids).size!==ids.length)throw new Error('Duplicate exercise id');
 for(const x of functionalExercises){
- if(!FUNCTIONAL_LEVELS.includes(x.level))throw new Error('Bad Functional level: '+x.id);
+ if(Object.hasOwn(x,'level'))throw new Error('Difficulty must be a program attribute, not an exercise attribute: '+x.id);
  if(!Array.isArray(x.primaryMuscles)||!x.primaryMuscles.length)throw new Error('Missing Functional primaryMuscles: '+x.id);
 }
 for(const x of reformerExercises){
@@ -17,6 +17,7 @@ for(const x of reformerExercises){
 }
 const known=new Set(ids);
 for(const p of expandedFunctionalPrograms){
+ if(!FUNCTIONAL_LEVELS.includes(p.level))throw new Error('Bad Functional program level: '+p.id);
  if(p.seconds!==3600)throw new Error('Functional program duration != 3600: '+p.id);
  for(const s of p.segments)if(s.type==='work'&&!known.has(s.exerciseId))throw new Error('Broken Functional ref '+p.id+' -> '+s.exerciseId);
 }
