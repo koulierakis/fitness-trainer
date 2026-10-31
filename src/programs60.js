@@ -1,4 +1,4 @@
-// Athletico Fitness Trainer — weekly Functional rotation 2026-10-24.
+// Athletico Fitness Trainer — weekly Functional rotation 2026-10-31.
 // Exactly eight 60-minute sessions. Difficulty belongs to PROGRAMS, not exercises.
 // Exercise references use canonical local:* IDs; the UI merges QA-manifest GLB media at runtime.
 const intervalBlock=(ids,minutes,work,rest,stage,label)=>{
@@ -25,349 +25,354 @@ const make=(meta,set)=>{
  const seconds=segments.reduce((n,s)=>n+s.seconds,0);
  if(seconds!==3600)throw new Error(`${meta.id}: expected 3600s, got ${seconds}s`);
  const {mainRatio,finishRatio,...publicMeta}=meta;
- return {...publicMeta,duration:60,seconds,week:'2026-10-24',phaseMinutes:{...PHASE_MINUTES},mainRatio,finishRatio,segments,
+ return {...publicMeta,duration:60,seconds,week:'2026-10-31',phaseMinutes:{...PHASE_MINUTES},mainRatio,finishRatio,segments,
   safety:'Beginner: έλεγξε τεχνική και αναπνοή, χρησιμοποίησε regressions. Advanced: μόνο υπομέγιστα φορτία, χωρίς προσπάθεια μέγιστης άρσης με χρονόμετρο. Σταμάτησε σε πόνο, ζάλη ή δυσφορία.'};
 };
 const W={
   "bFull": {
     "warm": [
       "arm_swings",
-      "bodyweight_good_morning",
       "ankle_rocker",
+      "bodyweight_good_morning",
+      "lateral_lunge",
       "thoracic_rotation",
       "squat",
-      "lateral_lunge",
       "shoulder_circles",
       "hamstring_sweep"
     ],
     "prep": [
       "glute_activation_bridge",
       "band_pull_apart",
-      "dead_bug",
+      "bird_dog",
       "split_squat",
       "band_row",
-      "bird_dog",
+      "dead_bug",
       "plank"
     ],
     "main": [
-      "dumbbell_goblet_squat",
-      "trx_row",
-      "dumbbell_step_up",
-      "push_up",
-      "kettlebell_deadlift",
+      "squat",
+      "dumbbell_romanian_deadlift",
+      "trx_chest_press",
+      "band_row",
+      "dumbbell_reverse_lunge",
       "suitcase_carry",
-      "dumbbell_floor_press"
+      "glute_bridge"
     ],
     "finish": [
-      "step_up_knee_drive",
-      "slow_mountain_climber",
-      "plank_shoulder_tap",
-      "lateral_shuffle",
-      "farmer_carry"
+      "lateral_step_up",
+      "bear_plank",
+      "battle_rope_waves",
+      "farmer_carry",
+      "slow_mountain_climber"
     ],
     "cool": [
-      "hip_flexor_stretch",
-      "hamstring_sweep",
       "childs_pose",
+      "hip_flexor_stretch",
+      "calf_stretch",
       "kneeling_lat_stretch",
       "cat_cow"
     ]
   },
   "bStrength": {
     "warm": [
-      "cat_cow",
       "shoulder_circles",
       "bodyweight_good_morning",
       "ankle_rocker",
-      "squat",
+      "cat_cow",
       "arm_swings",
-      "glute_activation_bridge",
-      "thoracic_rotation"
+      "split_squat",
+      "thoracic_rotation",
+      "hamstring_sweep"
     ],
     "prep": [
-      "band_pull_apart",
+      "band_external_rotation",
       "glute_bridge",
       "dead_bug",
       "incline_push_up",
       "band_lateral_walk",
-      "split_squat",
+      "trx_row",
       "bird_dog"
     ],
     "main": [
-      "dumbbell_split_squat",
-      "dumbbell_bench_press",
-      "kettlebell_rdl",
-      "trx_row",
-      "dumbbell_step_up",
+      "dumbbell_goblet_squat",
+      "dumbbell_row",
+      "dumbbell_floor_press",
+      "kettlebell_deadlift",
+      "trx_reverse_lunge",
       "band_pallof_press",
       "push_up"
     ],
     "finish": [
-      "farmer_carry",
-      "bird_dog_row",
-      "band_face_pull",
-      "wall_sit"
+      "wall_sit",
+      "suitcase_carry",
+      "trx_face_pull",
+      "side_plank"
     ],
     "cool": [
-      "calf_stretch",
       "hip_flexor_stretch",
       "kneeling_lat_stretch",
-      "childs_pose",
-      "cat_cow"
+      "hamstring_sweep",
+      "calf_stretch",
+      "childs_pose"
     ]
   },
   "bConditioning": {
     "warm": [
-      "ankle_rocker",
       "lateral_shuffle",
       "arm_swings",
+      "ankle_rocker",
       "squat",
-      "hamstring_sweep",
+      "thoracic_rotation",
       "shoulder_circles",
       "bodyweight_good_morning",
-      "thoracic_rotation"
+      "lateral_lunge"
     ],
     "prep": [
       "step_up",
+      "band_lateral_walk",
       "glute_activation_bridge",
       "slow_mountain_climber",
-      "band_row",
-      "plank",
-      "lateral_lunge",
-      "bird_dog"
+      "dead_bug",
+      "bird_dog",
+      "band_row"
     ],
     "main": [
-      "step_up_knee_drive",
+      "squat",
+      "lateral_step_up",
+      "battle_rope_waves",
+      "lunge_to_knee_drive",
       "band_squat_press",
-      "kettlebell_deadlift",
-      "skater_step",
-      "battle_rope_alternating_waves",
       "bear_crawl"
     ],
     "finish": [
-      "squat_thrust",
-      "battle_rope_waves",
+      "lateral_shuffle",
+      "slow_mountain_climber",
       "walking_lunge",
-      "mountain_climber"
+      "battle_rope_side_waves",
+      "step_up"
     ],
     "cool": [
-      "cat_cow",
       "calf_stretch",
-      "hip_flexor_stretch",
       "childs_pose",
+      "cat_cow",
+      "hip_flexor_stretch",
       "kneeling_lat_stretch"
     ]
   },
   "bHybrid": {
     "warm": [
+      "cat_cow",
       "shoulder_circles",
-      "bodyweight_good_morning",
+      "arm_swings",
       "lateral_lunge",
       "ankle_rocker",
-      "arm_swings",
+      "bodyweight_good_morning",
       "squat",
-      "cat_cow",
       "thoracic_rotation"
     ],
     "prep": [
-      "band_lateral_walk",
-      "glute_bridge",
-      "incline_push_up",
-      "bird_dog",
+      "glute_activation_bridge",
+      "band_pull_apart",
       "step_up",
-      "band_row",
-      "dead_bug"
+      "bird_dog",
+      "dead_bug",
+      "incline_push_up",
+      "band_row"
     ],
     "main": [
-      "dumbbell_step_up",
-      "band_row",
-      "kettlebell_goblet_squat",
-      "dumbbell_floor_press",
-      "kettlebell_rdl",
-      "farmer_carry",
-      "push_up"
+      "dumbbell_goblet_squat",
+      "trx_chest_press",
+      "dumbbell_row",
+      "dumbbell_reverse_lunge",
+      "kettlebell_deadlift",
+      "push_up",
+      "suitcase_carry"
     ],
     "finish": [
+      "battle_rope_waves",
+      "step_up",
       "band_squat_press",
-      "lateral_shuffle",
-      "plank_shoulder_tap",
-      "step_up_knee_drive"
+      "plank_shoulder_tap"
     ],
     "cool": [
+      "kneeling_lat_stretch",
       "hamstring_sweep",
       "hip_flexor_stretch",
-      "kneeling_lat_stretch",
-      "cat_cow",
-      "childs_pose"
+      "childs_pose",
+      "cat_cow"
     ]
   },
   "aFull": {
     "warm": [
       "inchworm",
-      "ankle_rocker",
       "lateral_lunge",
-      "thoracic_rotation",
       "bodyweight_good_morning",
+      "ankle_rocker",
+      "thoracic_rotation",
       "squat",
-      "plank_shoulder_tap",
-      "arm_swings"
+      "arm_swings",
+      "plank_shoulder_tap"
     ],
     "prep": [
-      "front_squat",
-      "bent_over_row",
-      "push_up",
-      "single_leg_rdl",
-      "kettlebell_halo",
       "band_face_pull",
-      "dead_bug"
+      "glute_bridge",
+      "single_leg_rdl",
+      "push_up",
+      "dead_bug",
+      "kettlebell_halo",
+      "trx_row"
     ],
     "main": [
-      "hang_power_clean",
-      "front_squat",
+      "back_squat",
+      "dumbbell_thruster",
       "renegade_row",
-      "dumbbell_snatch",
-      "push_press",
-      "dumbbell_bulgarian_split_squat",
-      "clean_and_jerk"
+      "dumbbell_lateral_lunge",
+      "kettlebell_clean_press",
+      "romanian_deadlift",
+      "suitcase_carry"
     ],
     "finish": [
-      "battle_rope_power_slam",
-      "skater_jump",
-      "kettlebell_clean_press",
-      "mountain_climber"
+      "battle_rope_slam",
+      "bear_crawl_shoulder_tap",
+      "kettlebell_swing",
+      "skater_step",
+      "burpee"
     ],
     "cool": [
-      "childs_pose",
       "hip_flexor_stretch",
-      "hamstring_sweep",
       "kneeling_lat_stretch",
+      "calf_stretch",
+      "childs_pose",
       "cat_cow"
     ]
   },
   "aStrength": {
     "warm": [
-      "ankle_rocker",
       "inchworm",
       "bodyweight_good_morning",
-      "thoracic_rotation",
+      "ankle_rocker",
       "squat",
-      "band_pull_apart",
+      "arm_swings",
+      "thoracic_rotation",
       "lateral_lunge",
-      "glute_activation_bridge"
+      "band_pull_apart"
     ],
     "prep": [
-      "back_squat",
-      "dumbbell_row",
-      "glute_bridge",
-      "overhead_press",
+      "band_row",
+      "glute_activation_bridge",
       "dead_bug",
-      "band_face_pull",
-      "split_squat"
+      "split_squat",
+      "push_up",
+      "kettlebell_deadlift",
+      "band_external_rotation"
     ],
     "main": [
-      "back_squat",
-      "dumbbell_romanian_deadlift",
-      "dumbbell_floor_press",
-      "chest_supported_row",
-      "dumbbell_reverse_lunge",
-      "single_arm_dumbbell_press"
-    ],
-    "finish": [
-      "farmer_carry",
-      "band_pallof_press",
-      "bird_dog_row",
+      "deadlift",
+      "dumbbell_bench_press",
+      "dumbbell_single_leg_rdl",
+      "bent_over_row",
+      "dumbbell_lateral_lunge",
+      "push_up",
       "kettlebell_rack_carry"
     ],
+    "finish": [
+      "suitcase_carry",
+      "half_kneeling_pallof_press",
+      "trx_face_pull",
+      "glute_bridge"
+    ],
     "cool": [
-      "hip_flexor_stretch",
       "hamstring_sweep",
-      "calf_stretch",
+      "hip_flexor_stretch",
+      "childs_pose",
       "kneeling_lat_stretch",
-      "childs_pose"
+      "calf_stretch"
     ]
   },
   "aConditioning": {
     "warm": [
       "lateral_shuffle",
-      "inchworm",
       "arm_swings",
-      "squat",
       "ankle_rocker",
-      "thoracic_rotation",
+      "squat",
+      "inchworm",
       "lateral_lunge",
+      "thoracic_rotation",
       "shoulder_circles"
     ],
     "prep": [
-      "kettlebell_deadlift",
-      "plank_shoulder_tap",
-      "dumbbell_goblet_squat",
-      "band_row",
-      "skater_step",
+      "band_squat_press",
       "bear_crawl",
+      "glute_activation_bridge",
+      "plank_shoulder_tap",
+      "kettlebell_deadlift",
+      "skater_step",
       "push_up"
     ],
     "main": [
+      "burpee",
+      "battle_rope_waves",
+      "dumbbell_thruster",
+      "lateral_shuffle",
       "kettlebell_swing",
-      "kettlebell_clean_squat_press",
-      "battle_rope_alternating_waves",
-      "skater_jump",
-      "dumbbell_snatch",
-      "renegade_row"
+      "bear_crawl",
+      "skater_step"
     ],
     "finish": [
-      "kettlebell_swing",
-      "battle_rope_power_slam",
-      "burpee",
-      "plank_jack"
+      "battle_rope_side_waves",
+      "squat_thrust",
+      "cross_body_mountain_climber",
+      "skater_jump",
+      "dumbbell_clean_squat_press"
     ],
     "cool": [
-      "cat_cow",
-      "hip_flexor_stretch",
       "calf_stretch",
+      "hip_flexor_stretch",
+      "cat_cow",
       "childs_pose",
       "kneeling_lat_stretch"
     ]
   },
   "aHybrid": {
     "warm": [
-      "inchworm",
-      "shoulder_circles",
-      "bodyweight_good_morning",
-      "ankle_rocker",
-      "lateral_lunge",
-      "squat",
       "arm_swings",
-      "thoracic_rotation"
+      "inchworm",
+      "bodyweight_good_morning",
+      "lateral_lunge",
+      "ankle_rocker",
+      "squat",
+      "thoracic_rotation",
+      "shoulder_circles"
     ],
     "prep": [
       "kettlebell_halo",
-      "front_squat",
       "band_face_pull",
+      "dead_bug",
+      "trx_row",
       "single_leg_rdl",
-      "push_up",
-      "plank_shoulder_tap",
-      "glute_bridge"
+      "glute_activation_bridge",
+      "plank_shoulder_tap"
     ],
     "main": [
-      "clean_and_press",
-      "dumbbell_bulgarian_split_squat",
-      "renegade_row",
-      "kettlebell_front_rack_squat",
-      "dumbbell_snatch",
-      "trx_row",
-      "bear_crawl"
+      "push_up",
+      "dumbbell_clean_press",
+      "dumbbell_step_up",
+      "cable_row",
+      "kettlebell_reverse_lunge",
+      "dumbbell_thruster",
+      "kettlebell_suitcase_carry"
     ],
     "finish": [
-      "battle_rope_power_slam",
-      "squat_thrust",
+      "burpee",
+      "battle_rope_alternating_waves",
       "kettlebell_swing",
-      "skater_jump"
+      "bear_crawl_shoulder_tap"
     ],
     "cool": [
       "childs_pose",
-      "hip_flexor_stretch",
-      "hamstring_sweep",
       "kneeling_lat_stretch",
+      "hip_flexor_stretch",
+      "calf_stretch",
       "cat_cow"
     ]
   }
@@ -378,17 +383,17 @@ const specs=[
     "Beginner Full Body",
     "Beginner",
     "Full Body",
-    "Bodyweight + Dumbbells + TRX + Kettlebell",
+    "Bodyweight + Dumbbells + TRX + Bands + Battle Ropes",
     "bFull",
     [
-      40,
-      35
+      42,
+      38
     ],
     [
       35,
-      25
+      30
     ],
-    "Squat / push / pull / carry, moderate pace"
+    "Anti-rotation, lateral movement and balanced push/pull"
   ],
   [
     "b-strength-60",
@@ -398,48 +403,48 @@ const specs=[
     "Dumbbells + Kettlebell + TRX + Bands",
     "bStrength",
     [
-      35,
-      40
+      38,
+      47
     ],
     [
-      35,
-      25
+      30,
+      35
     ],
-    "Controlled unilateral strength and upper/lower balance"
+    "Tempo-controlled squat/hinge and unilateral strength"
   ],
   [
     "b-conditioning-60",
     "Beginner Conditioning",
     "Beginner",
     "Conditioning",
-    "Bodyweight + Bands + Kettlebell + Battle Ropes",
+    "Bodyweight + Bands + Battle Ropes",
     "bConditioning",
     [
-      40,
-      35
+      35,
+      30
     ],
     [
       35,
-      25
+      30
     ],
-    "Low-impact conditioning and locomotion"
+    "Low-impact multidirectional aerobic intervals"
   ],
   [
     "b-hybrid-60",
     "Beginner Hybrid",
     "Beginner",
     "Hybrid",
-    "Bodyweight + Dumbbells + Kettlebell + Bands",
+    "Bodyweight + Dumbbells + TRX + Kettlebell + Bands",
     "bHybrid",
     [
       40,
-      35
+      40
     ],
     [
-      35,
-      25
+      40,
+      30
     ],
-    "Strength circuits followed by controlled aerobic intervals"
+    "Alternating unilateral strength and steady conditioning"
   ],
   [
     "a-full-body-60",
@@ -449,31 +454,31 @@ const specs=[
     "Barbell + Dumbbells + Kettlebell + Battle Ropes",
     "aFull",
     [
-      50,
-      25
+      45,
+      30
     ],
     [
       45,
-      15
+      20
     ],
-    "Full-body compound power and multi-planar control"
+    "Posterior-chain strength and multiplanar control"
   ],
   [
     "a-strength-60",
     "Advanced Strength",
     "Advanced",
     "Strength",
-    "Barbell + Dumbbells + Kettlebell + Bands",
+    "Barbell + Dumbbells + Kettlebell + TRX",
     "aStrength",
     [
       40,
-      35
+      50
     ],
     [
-      40,
-      20
+      35,
+      35
     ],
-    "Submaximal compound strength, strict technique, loaded carries"
+    "Submaximal posterior-chain strength with longer recovery"
   ],
   [
     "a-conditioning-60",
@@ -483,35 +488,35 @@ const specs=[
     "Bodyweight + Dumbbells + Kettlebell + Battle Ropes",
     "aConditioning",
     [
-      55,
+      45,
       20
     ],
     [
-      45,
-      15
+      40,
+      20
     ],
-    "High-density metabolic work with controlled transitions"
+    "Multidirectional high-density metabolic work"
   ],
   [
     "a-hybrid-60",
     "Advanced Hybrid",
     "Advanced",
     "Hybrid",
-    "Barbell + Dumbbells + Kettlebell + TRX",
+    "Bodyweight + Dumbbells + Kettlebell + Cables + Battle Ropes",
     "aHybrid",
     [
-      50,
-      25
+      45,
+      30
     ],
     [
-      45,
-      15
+      40,
+      20
     ],
-    "Compound strength-to-conditioning progression"
+    "Unilateral compound strength with power-endurance finisher"
   ]
 ];
 export const PROGRAM_CATEGORIES=['Full Body','Strength','Conditioning','Hybrid'];
-export const programs=specs.map(([id,title,level,type,equipment,key,mainRatio,finishRatio,emphasis])=>make({id,title,subtitle:`24/10 · ${emphasis}`,level,type,methodology:type,equipment,focus:type,mainRatio,finishRatio},W[key]));
+export const programs=specs.map(([id,title,level,type,equipment,key,mainRatio,finishRatio,emphasis])=>make({id,title,subtitle:`31/10 · ${emphasis}`,level,type,methodology:type,equipment,focus:type,mainRatio,finishRatio},W[key]));
 export const validatePrograms=()=>{
  const expected=['Beginner Full Body','Beginner Strength','Beginner Conditioning','Beginner Hybrid','Advanced Full Body','Advanced Strength','Advanced Conditioning','Advanced Hybrid'];
  if(programs.length!==8||programs.some((p,i)=>p.title!==expected[i]||p.seconds!==3600||p.duration!==60||!['Beginner','Advanced'].includes(p.level)))return false;
