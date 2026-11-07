@@ -1,4 +1,4 @@
-// Athletico Fitness Trainer — weekly Functional rotation 2026-10-31.
+// Athletico Fitness Trainer — weekly Functional rotation 2026-11-07.
 // Exactly eight 60-minute sessions. Difficulty belongs to PROGRAMS, not exercises.
 // Exercise references use canonical local:* IDs; the UI merges QA-manifest GLB media at runtime.
 const intervalBlock=(ids,minutes,work,rest,stage,label)=>{
@@ -25,7 +25,7 @@ const make=(meta,set)=>{
  const seconds=segments.reduce((n,s)=>n+s.seconds,0);
  if(seconds!==3600)throw new Error(`${meta.id}: expected 3600s, got ${seconds}s`);
  const {mainRatio,finishRatio,...publicMeta}=meta;
- return {...publicMeta,duration:60,seconds,week:'2026-10-31',phaseMinutes:{...PHASE_MINUTES},mainRatio,finishRatio,segments,
+ return {...publicMeta,duration:60,seconds,week:'2026-11-07',phaseMinutes:{...PHASE_MINUTES},mainRatio,finishRatio,segments,
   safety:'Beginner: έλεγξε τεχνική και αναπνοή, χρησιμοποίησε regressions. Advanced: μόνο υπομέγιστα φορτία, χωρίς προσπάθεια μέγιστης άρσης με χρονόμετρο. Σταμάτησε σε πόνο, ζάλη ή δυσφορία.'};
 };
 const W={
@@ -50,20 +50,20 @@ const W={
       "plank"
     ],
     "main": [
-      "squat",
-      "dumbbell_romanian_deadlift",
-      "trx_chest_press",
-      "band_row",
-      "dumbbell_reverse_lunge",
-      "suitcase_carry",
-      "glute_bridge"
+      "dumbbell_goblet_squat",
+      "trx_row",
+      "dumbbell_step_up",
+      "dumbbell_floor_press",
+      "kettlebell_deadlift",
+      "band_pallof_press",
+      "farmer_carry"
     ],
     "finish": [
-      "lateral_step_up",
-      "bear_plank",
-      "battle_rope_waves",
-      "farmer_carry",
-      "slow_mountain_climber"
+      "step_up",
+      "battle_rope_alternating_waves",
+      "bear_crawl",
+      "walking_lunge",
+      "plank_shoulder_tap"
     ],
     "cool": [
       "childs_pose",
@@ -94,19 +94,19 @@ const W={
       "bird_dog"
     ],
     "main": [
-      "dumbbell_goblet_squat",
-      "dumbbell_row",
+      "box_squat",
+      "dumbbell_romanian_deadlift",
+      "trx_row",
       "dumbbell_floor_press",
-      "kettlebell_deadlift",
-      "trx_reverse_lunge",
-      "band_pallof_press",
-      "push_up"
+      "dumbbell_step_up",
+      "band_row",
+      "suitcase_carry"
     ],
     "finish": [
-      "wall_sit",
-      "suitcase_carry",
-      "trx_face_pull",
-      "side_plank"
+      "glute_bridge",
+      "bird_dog_row",
+      "side_plank",
+      "band_face_pull"
     ],
     "cool": [
       "hip_flexor_stretch",
@@ -137,19 +137,19 @@ const W={
       "band_row"
     ],
     "main": [
-      "squat",
-      "lateral_step_up",
-      "battle_rope_waves",
-      "lunge_to_knee_drive",
+      "step_up",
+      "battle_rope_alternating_waves",
+      "lateral_shuffle",
       "band_squat_press",
-      "bear_crawl"
+      "slow_mountain_climber",
+      "walking_lunge"
     ],
     "finish": [
-      "lateral_shuffle",
-      "slow_mountain_climber",
-      "walking_lunge",
-      "battle_rope_side_waves",
-      "step_up"
+      "battle_rope_waves",
+      "skater_step",
+      "bear_crawl",
+      "squat",
+      "farmer_carry"
     ],
     "cool": [
       "calf_stretch",
@@ -180,19 +180,19 @@ const W={
       "band_row"
     ],
     "main": [
-      "dumbbell_goblet_squat",
-      "trx_chest_press",
+      "dumbbell_step_up",
       "dumbbell_row",
-      "dumbbell_reverse_lunge",
-      "kettlebell_deadlift",
-      "push_up",
-      "suitcase_carry"
+      "kettlebell_goblet_squat",
+      "trx_chest_press",
+      "dumbbell_romanian_deadlift",
+      "band_pallof_press",
+      "farmer_carry"
     ],
     "finish": [
+      "lateral_shuffle",
       "battle_rope_waves",
       "step_up",
-      "band_squat_press",
-      "plank_shoulder_tap"
+      "bear_plank"
     ],
     "cool": [
       "kneeling_lat_stretch",
@@ -223,20 +223,20 @@ const W={
       "trx_row"
     ],
     "main": [
-      "back_squat",
-      "dumbbell_thruster",
+      "front_squat",
       "renegade_row",
-      "dumbbell_lateral_lunge",
-      "kettlebell_clean_press",
+      "dumbbell_reverse_lunge",
+      "push_press",
       "romanian_deadlift",
-      "suitcase_carry"
+      "kettlebell_rack_carry",
+      "dumbbell_thruster"
     ],
     "finish": [
-      "battle_rope_slam",
+      "battle_rope_alternating_waves",
       "bear_crawl_shoulder_tap",
+      "skater_jump",
       "kettlebell_swing",
-      "skater_step",
-      "burpee"
+      "squat_thrust"
     ],
     "cool": [
       "hip_flexor_stretch",
@@ -267,19 +267,19 @@ const W={
       "band_external_rotation"
     ],
     "main": [
-      "deadlift",
-      "dumbbell_bench_press",
-      "dumbbell_single_leg_rdl",
+      "front_squat",
       "bent_over_row",
-      "dumbbell_lateral_lunge",
-      "push_up",
-      "kettlebell_rack_carry"
+      "dumbbell_bulgarian_split_squat",
+      "dumbbell_bench_press",
+      "romanian_deadlift",
+      "kettlebell_rack_carry",
+      "single_leg_rdl"
     ],
     "finish": [
-      "suitcase_carry",
-      "half_kneeling_pallof_press",
-      "trx_face_pull",
-      "glute_bridge"
+      "farmer_carry",
+      "band_pallof_press",
+      "trx_row",
+      "dead_bug"
     ],
     "cool": [
       "hamstring_sweep",
@@ -310,20 +310,20 @@ const W={
       "push_up"
     ],
     "main": [
-      "burpee",
-      "battle_rope_waves",
-      "dumbbell_thruster",
-      "lateral_shuffle",
+      "dumbbell_clean_press",
+      "battle_rope_power_slam",
+      "skater_jump",
       "kettlebell_swing",
       "bear_crawl",
-      "skater_step"
+      "dumbbell_thruster",
+      "lateral_shuffle"
     ],
     "finish": [
-      "battle_rope_side_waves",
-      "squat_thrust",
+      "battle_rope_alternating_waves",
+      "burpee",
       "cross_body_mountain_climber",
-      "skater_jump",
-      "dumbbell_clean_squat_press"
+      "dumbbell_clean_squat_press",
+      "skater_step"
     ],
     "cool": [
       "calf_stretch",
@@ -354,19 +354,19 @@ const W={
       "plank_shoulder_tap"
     ],
     "main": [
-      "push_up",
-      "dumbbell_clean_press",
+      "dumbbell_thruster",
+      "renegade_row",
+      "kettlebell_reverse_lunge",
       "dumbbell_step_up",
       "cable_row",
-      "kettlebell_reverse_lunge",
-      "dumbbell_thruster",
+      "dumbbell_clean_press",
       "kettlebell_suitcase_carry"
     ],
     "finish": [
-      "burpee",
-      "battle_rope_alternating_waves",
+      "battle_rope_power_slam",
+      "bear_crawl_shoulder_tap",
       "kettlebell_swing",
-      "bear_crawl_shoulder_tap"
+      "squat_thrust"
     ],
     "cool": [
       "childs_pose",
@@ -386,12 +386,12 @@ const specs=[
     "Bodyweight + Dumbbells + TRX + Bands + Battle Ropes",
     "bFull",
     [
-      42,
-      38
+      38,
+      42
     ],
     [
-      35,
-      30
+      38,
+      32
     ],
     "Anti-rotation, lateral movement and balanced push/pull"
   ],
@@ -403,8 +403,8 @@ const specs=[
     "Dumbbells + Kettlebell + TRX + Bands",
     "bStrength",
     [
-      38,
-      47
+      35,
+      50
     ],
     [
       30,
@@ -454,12 +454,12 @@ const specs=[
     "Barbell + Dumbbells + Kettlebell + Battle Ropes",
     "aFull",
     [
-      45,
-      30
+      48,
+      27
     ],
     [
-      45,
-      20
+      48,
+      22
     ],
     "Posterior-chain strength and multiplanar control"
   ],
@@ -471,8 +471,8 @@ const specs=[
     "Barbell + Dumbbells + Kettlebell + TRX",
     "aStrength",
     [
-      40,
-      50
+      38,
+      52
     ],
     [
       35,
@@ -516,7 +516,7 @@ const specs=[
   ]
 ];
 export const PROGRAM_CATEGORIES=['Full Body','Strength','Conditioning','Hybrid'];
-export const programs=specs.map(([id,title,level,type,equipment,key,mainRatio,finishRatio,emphasis])=>make({id,title,subtitle:`31/10 · ${emphasis}`,level,type,methodology:type,equipment,focus:type,mainRatio,finishRatio},W[key]));
+export const programs=specs.map(([id,title,level,type,equipment,key,mainRatio,finishRatio,emphasis])=>make({id,title,subtitle:`07/11 · ${emphasis}`,level,type,methodology:type,equipment,focus:type,mainRatio,finishRatio},W[key]));
 export const validatePrograms=()=>{
  const expected=['Beginner Full Body','Beginner Strength','Beginner Conditioning','Beginner Hybrid','Advanced Full Body','Advanced Strength','Advanced Conditioning','Advanced Hybrid'];
  if(programs.length!==8||programs.some((p,i)=>p.title!==expected[i]||p.seconds!==3600||p.duration!==60||!['Beginner','Advanced'].includes(p.level)))return false;
